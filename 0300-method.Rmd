@@ -1,0 +1,46 @@
+# Methods
+
+## Fish Sampling
+Electrofishing was utilized for fish sampling according to stream inventory standards and procedures found in the Reconnaissance (1:20 000) Fish and Fish Habitat Inventory Manual [@resourcesinventorycommittee2001Reconnaissance20]. Individual captured fish were GPS'd, measured for fork length and released.  A [Fish Data Submission Spreadsheet Template - V 2.0, January 20, 2020 ](https://www2.gov.bc.ca/gov/content/environment/plants-animals-ecosystems/fish/fish-and-fish-habitat-data-information/fish-data-submission/submit-fish-data#submitfish) was populated for all sites and will be submitted to the provincial government under scientific fish collection permit CB22-755885. Habitat characteristics measured included water temperature, pH, conductivity, channel/wetted widths, pool depths, gradient,  bankfull channel depth, stage, cover, large woody debris presence/abundance, channel bank characteristics, riparian vegetation type/structural stage, substrate and channel morphology. Downstream and upstream photographs were taken at each site and relevant features were recorded.  
+
+<br>
+
+Habitat data associated with electrofishing sites was collated on ["Site Cards"](https://www2.gov.bc.ca/gov/content/environment/natural-resource-stewardship/laws-policies-standards-guidance/inventory-standards/aquatic-ecosystems) with habitat characteristics recorded included channel widths, wetted widths, residual pool depths, gradients, bankfull depths, stage, temperature, conductivity, pH, cover by type, substrate and channel morphology (among others). Any  potential  obstacles  to  fish  passage  were  inventoried  with  photos, physical  descriptions  and  locations  recorded on site cards.  Surveyed routes were recorded with time-signatures on handheld GPS units.   
+
+<br>
+
+
+## Fish Habitat Assessment 
+The Fish Habitat Assessment Procedures were developed by @johnston_slaney1996FishHabitat to provide a standard framework for identifying needs and opportunities for fish habitat restoration.  Field assessments in 2022 included Level 1 assessments - which are standardized protocols for characterizing average fish habitat conditions within stream reaches with the intent to identify scenarios that may limit fish production.  Sample sites were divided into distinct geomorphic habitat units based on gradient, water flow characteristics, depth and size/position of the habitat unit relative to the main channel (habitat unit category). Habitat unit categories consisted of primary (occupy more than 50% of the wetted width of the main channel), secondary (side channels) and tertiary units (less than . These habitat units consisted of pools, glides, riffles and cascades which are described in more detail below:
+
+ + Pools - areas of slower, deeper water created by impoundment of water or scour (often associated with large woody debris) with a concave bottom profile and a water surface gradient near 0%. Minimum dimensions for the size of pools (miniumum area and associated minimum residual depth) are defined in @johnston_slaney1996FishHabitat and based on the bankfull channel width of the stream.
+ 
+ + Glides were defined as areas of flat bottomed, fast-flowing and non-turbulent (laminar) flow.
+ 
+ + Riffles included areas of turbulent, fast flowing water usually consisting of shallow moderate-gradient areas with gravel or cobble bed material projecting above the water surface and obvious surface turbulence. 
+ 
+ + Cascades included steeper, stepped "riffles" of bedrock or emergent substrates in channels with gradient greater than ~4%.  The water surface is usually very turbulent and frothy and white in appearance.
+ 
+Sites were surveyed using a hip chain to track distance with the following attributes recorded for each habitat unit - gradient, mean water depth, mean wetted width, mean bankfull channel width, mean bankfull depth, pool characteristics (max depth, crest depth, residual depth), pool type (scour pool or impoundment), dominant/subdominant bed material type, large woody debris (total of all pieces >10cm in diameter as well as total number of "functional" pieces broken out into multiple size categories), cover (% by type), disturbance indicators, riparian vegetation type, riparian structural stage, overstream canopy closure and spawning gravel amount/type.
+
+<br>
+
+A clinometer was used to estimate gradient, channel measurements were taken using a tape measure and water depths measured using a measuring stick.  Photographs were taken of representative habitats throughout the surveyed reaches.  All field measurements were recorded on Level 1 Habitat Survey Data Form templates (@johnston_slaney1996FishHabitat). GPS waypoints were collected at the beginning and end of all Primary habitat units to allow georeferenceing of field data.
+
+## Stream Discharge
+Estimates of stream discharge were collected on October 18, 2022 coinciding with fish habitat assessments in Weigert Creek. Data was collected in accordance with the Manual of British Columbia Hydrometric Standards [@resourcesinformationstandardscommittee2018ManualBritish].  Measurements were taken at points upstream and dowstream of Highway 43 at both Weigert Creek and Brule Creek using a HACH FH950 flow meter and area-velocity method. The stream was divided into 19-20 evenly distributed sections, free from vegetation, immovable rocks and obstructions with stream depth and velocity within each section were collected using a HACH FH950 flow meter. 
+
+<br>
+
+
+## Water Temperature
+A HOBO Water Temp Pro v2 logger was installed approximately 20m upstream of Highway 43 on Weigert Creek and on Brule Creek immediately below the falls at approximately 3.6km upstream of the Highway 43 culverts. Loggers were installed within a white PVC tube housing to prevent thermal transfer, with perforations on the protective housing to allow water to flow through the tubing. The loggers were anchored to the shoreline with steel cable at a water depth of 60% total depth on June 24, 2023 and pulled on November 17, 2023. Temperature was taken at 30-minute intervals for the entire length of time installed. Unfortunately, high flows with Brule Creek resulted in the dislodging of the logger installed under the falls and the subsequent loss of the logger and all associated data.
+
+<br>
+
+
+We defined the start of the growing season as per @coleman_fausch2007ColdSummer which delineate it as the beginning of the first week that average stream temperatures exceed and remain above 5$^\circ$C in the spring and the end of the growing season as the last day of the first week that average stream temperature drops below 4$^\circ$C. We specified Monday as the first day of the week and identified the week of the year based on the number of 7 day periods from January 1 plus 1.  Celsius degree-days were calculated as the mean daily temperature (ex. 2 days with average temperatures of 7$^\circ$C with sum to 14 Celsius degree-days).
+
+
+
+

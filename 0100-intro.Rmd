@@ -1,0 +1,22 @@
+
+
+# Introduction {#intro}
+Since 2020, the Canadian Wildlife Federation (CWF) has been working on a watershed connectivity remediation plan for the Elk River watershed that incorporates the provincial Strategic Approach protocol (Fish Passage Assessment, Habitat Confirmation, Design and Remediation), evolution of the `bcfishpass` analysis tools [@norris2023smnorrisbcfishpass] and local knowledge of the watershed to prioritize barriers and restore connectivity for westslope cutthroat trout and other species in a strategic manner. Nupqu Resource Limited Partnership (Nupqu) was retained by the CWF in the summer of 2022 to conduct fish habitat, fish sampling assessments, temperature monitoring and discharge monitoring at sites related to road-stream crossings within the Elk River watershed group as part of this connectivity restoration planning. Subject streams included Brule Creek and Weigert Creek. New Graph Environment Ltd. was sub-contracted by Nupqu to assist with project delivery. 
+
+<br>
+
+Assessments conducted in 2022 complement work completed in 2020 (72 fish passage assessments and 15 habitat confirmation assessments) and 2021 (92 fish passage assessments and 15 habitat confirmation assessments) which can be viewed interactively online at https://newgraphenvironment.github.io/fish_passage_elk_2020_reporting_cwf/ [@irvine2021UpperElk] and https://newgraphenvironment.github.io/fish_passage_elk_2021_reporting/ [@irvine2022ElkRiver].
+`r if(identical(gitbook_on, FALSE))knitr::asis_output("This report is available as pdf and as an online interactive report at https://newgraphenvironment.github.io/fish_passage_elk_2022_reporting/. Viewing online is recommended as the web-hosted version contains more features and is more easily navigable.")` 
+
+
+<br>
+
+
+The health and viability of freshwater fish populations can depend on access to tributary and off channel areas which provide refuge during high flows, opportunities for foraging, overwintering habitat, spawning habitat and summer rearing habitat [@Bramblett_2002; @swalesRoleOffChannelPonds1989; @diebel_etal2015EffectsRoad].  Culverts can present barriers to fish migration due to low water depth, increased water velocity, turbulence, a vertical drop at the culvert outlet and/or maintenance issues [@slaneyFishHabitatRehabilitation1997; @cote_etal2005Fishpassage].  
+
+<br>
+
+As the costs and effort required for works to remediate  fish passage issues through the replacement of road/stream crossings can be significant, acquisition of detailed habitat, fish sampling, water temperature and discharge data is a prudent measure to help ensure there is a reasonable understanding of current conditions, including species composition/density upstream and downstream of the crossings as well as the value and suitability of associated habitats for target fish species (westslope cutthrout trout) before investments in infrastructure to improve connectivity are made.  This work helps build our understanding of the extent of the issues present that may be a result of subject culverts as well as providing baseline data for assessing the benefits of remedial work post-fish passage remediation.
+
+
+
