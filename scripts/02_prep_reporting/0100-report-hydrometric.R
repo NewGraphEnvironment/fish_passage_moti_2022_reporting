@@ -1,5 +1,4 @@
 source('scripts/packages.R')
-
 ##08NK002 is elk river at Fernie  - 08NK016 is near sparwood
 ##08NK016
 
@@ -8,22 +7,23 @@ source('scripts/packages.R')
 ##C:\Users\allan\AppData\Local\tidyhydat\tidyhydat
 # C:\Users\al\AppData\Local\tidyhydat\tidyhydat
 
-hydatr::hydat_load(source = "C://Users//allan//AppData//Local//tidyhydat//tidyhydat") # loads the database (you'll need to call this one each time you load the package)
+# hydatr::hydat_load(source = "C://Users//allan//AppData//Local//tidyhydat//tidyhydat") # loads the database (you'll need to call this one each time you load the package)
 # hydatr::hydat_load(source = "C://Users//al//AppData//Local//tidyhydat//tidyhydat") # loads the database (you'll need to call this one each time you load the package)
 
 
-tidyhat_info <- search_stn_name("Elk")
+tidyhat_info <- search_stn_name("Five Mile")
 
 
 
 #elk river at Fernie
-station <- '08NK002'
-start_year = 1970
+station <- '08MC027'
+start_year = 1966
+end_year = 1975
 
 flow_raw <- tidyhydat::hy_daily_flows(station)
 
 tidyhat_info <- search_stn_number(station) #08EE003 is near houston
-hy_stn_data_coll('08NK002')
+hy_stn_data_coll(station)
 
 ##build caption for the figure
 caption_info <- mutate(tidyhat_info, title_stats = paste0(stringr::str_to_title(STATION_NAME),
@@ -42,7 +42,7 @@ hydrograph_stats_print <- fasstr::plot_data_screening(station_number = station,
                                                       include_stats = c("Mean", "Median", "Minimum", "Maximum"))[["Data_Screening"]] + ggdark::dark_theme_bw() ##first version is not dark
 hydrograph_stats_print
 
-ggsave(plot = hydrograph_stats_print, file=paste0("fig/hydrology_stats_", station, "2.png"),
+ggsave(plot = hydrograph_stats_print, file=paste0("fig/hydrology_stats_", station, ".png"),
        h=3.4, w=5.11, units="in", dpi=300)
 
 ##another way to make the graph
@@ -155,3 +155,5 @@ plot
 
 ggsave(plot = plot, file=paste0("./fig/hydrograph_", station, ".png"),
        h=3.4, w=5.11, units="in", dpi=300)
+
+
