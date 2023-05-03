@@ -1,4 +1,4 @@
-# Results
+# Results and Discussion
 
 A summary of monitoring site locations and metrics are presented in Tables \@ref(tab:tab-monitor-loc) and \@ref(tab:tab-monitor-sum).
 
@@ -68,7 +68,7 @@ my_site <- 196200
 ```
 
 PSCIS crossing 196200 on Bittner Creek is located on Foreman Road  within the municiple boundaries of the City of Prince George approximately `r round(fpr::fpr_my_bcfishpass(col_pull = downstream_route_measure)*0.001, 1)`km
-upstream from the confluence with the Fraser River (Figures \@ref(fig:map-overview) - \@ref(fig:lidar-bittner)). In 2016, just downstream of the subject crossing, the banks of Bittner Creek were armoured to stabilize two areas of erosion. To compensate for the net negative habitat balance of the project, the replacement of the culvert on Bittner Creek was included as a habitat enhancement in the habitat offsetting plan associated with permitting of the work.
+upstream from the confluence with the Fraser River (Figures \@ref(fig:map-overview) - \@ref(fig:lidar-bittner)). In 2016, just downstream of the subject crossing, the banks of Bittner Creek were armoured to stabilize two areas of erosion [@dwbconsultingservicesltd_2019FishHabitat]. @dwbconsultingservicesltd_2019FishHabitat reported that to compensate for the net negative habitat balance of the project, the replacement of the culvert on Bittner Creek was included as a habitat enhancement in the habitat offsetting plan associated with permitting of the work. As part of that the offsetting design intended to maintain the plunge pool habitat that had been created downstream of the culvert by installing a rock weir on the upstream end of the pool.
 
 
 <br>
@@ -78,7 +78,13 @@ At crossing `r as.character(my_site)`, Bittner Creek is a `r fpr::fpr_my_bcfishp
 
 <br>
 
-The subject site is the first stream crossing structure upstream of the Fraser River with numerous modelled and previously assessed stream crossing structures upstream. Upstream of the site approximately 400m there is a crossing modelled (`modelled_crossing_id` 19703286) on the Canadian National railway line.  Although data related to the assessment of this crossing was not provided and has not been uploaded to the Provincial Stream Crossing Inventory Summary System (PSCIS), @dwbconsultingservicesltd_2019FishHabitat report that the "CN crossing is considered passable to fish".    
+The subject site is the first stream crossing structure upstream of the Fraser River with numerous modelled and previously assessed stream crossing structures upstream. Upstream of the site approximately 400m there is a crossing modelled (`modelled_crossing_id` 19703286) on the Canadian National railway line.  Although data related to the assessment of this crossing was not provided and has not been uploaded to the Provincial Stream Crossing Inventory Summary System (PSCIS), @dwbconsultingservicesltd_2019FishHabitat report that the "CN crossing is considered passable to fish". There are numerous other unassessed modelled crossings and previously assessed crossings on the stream with PSCIS crossing 196197 located approximately 5km upstream of the subject crossing on Highway 16.  Review of PSCIS database information indicates this crossing was dry at the time of assessment (August 9, 2014) and ranked as a barrier to upstream migration (unembedded, with slope of 2% and outlet drop of 40cm). Numerous wetland and lakes are mapped as upstream of the crossing covering a total area estimated at approximatley 40ha.
+
+<br>
+
+```{r map-bittner, fig.cap = 'Map of Bittner Creek watershed.',eval=T}
+knitr::include_graphics("fig/bittner.png")
+```
 
 <br>
 
@@ -142,11 +148,7 @@ Habitat characteristics were gathered upstream and downstream of the Foreman Roa
 
 <br>
 
-Downstream of the bridge, the stream was surveyed for `r fpr::fpr_my_priority_info(loc = 'ds', col_pull = 'length_surveyed')`m. `r `fpr_my_habitat_paragraph('ds')` 
-
-<br>
-
-The area downstream adjacent to the bridge was lacking meaningful riparian vegetation due to a lack of shrub/tree installation into riprap areas during construction and the size of the channel in this location (due to infilling of historic large outlet pool).
+Downstream of the bridge, the stream was surveyed for `r fpr::fpr_my_priority_info(loc = 'ds', col_pull = 'length_surveyed')`m. `r `fpr_my_habitat_paragraph('ds')` The portion of creek immediately downstream of the bridge (20m) was lacking meaningful riparian vegetation due to a lack of shrub/tree installation into riprap areas during construction and the very wide channel width in this location.   (due to infilling of historic large outlet pool).
 
 
 ```{r tab-habitat-summary-196200, eval=T}
@@ -156,6 +158,17 @@ tab_hab_summary %>%
                  scroll = F) 
 
 ```
+
+<br>
+
+### Discussion 
+
+Although @dwbconsultingservicesltd_2019FishHabitat noted that installation of a rock weir on the upstream end of the historic culvert outlet pool was planned to maintain this habitat feature, it is unclear if this occurred.  Regardless, sediments have infilled the historic outlet pool and this area does not likely provide high or even moderate value habitat. 
+
+<br>
+
+Flows in Bittner Creek were low at the time of assessment and the adjacent landowner reports seasonal dewatering of the stream.  Nevetheless, numerous parr were observed within isolated pools upstream of the newly installed bridge and residual pools within intermittent systems can provide valuable habitat for juvenile salmon encouraging high growth rates and subsequent increased rates of overwinter survival [@ebersole_etal2006JuvenileCoho; @wigingtonjr_etal2006Cohosalmon; @maslin_mckinnev1998IntermittentStreams]. We recommend fish sampling to determine use of Bittner Creek habitats by chinook salmon for both spawning and rearing. As the site is located within Prince George city boundaries, potential collaborations could include programs involving University of Northern BC and local First Nations to understand not only fish health and movement but also overall watershed health including flow patterns and water temperatures. To encourage year round flows, in collaboration with local landowners/stewardship groups/First Nations, wetland area in the agricultural area to the north of the bridge (connected to first upstream tributary) should be assessed to determine if water storage could be increased by actions such as promoting beaver activity and infilling of historic drainage stuctures. The rail crossing located on the CN line (19703286) approximately 400m upstream of Foreman Road should be assessed for fish passage with the data gathered loaded to the PSCIS database. At the same time this area could be scoped for evidence of channel constriction, beaver management activities and other railway/agricultural land practices that may be promoting flushing of water through the area, channel incision and lowering of the water table.
+
 
 <br>
 
@@ -385,6 +398,13 @@ tab_hab_summary %>%
                  scroll = F) 
 
 ```
+
+<br>
+
+### Discussion
+Overall, the restoration of fish passage at Cross Creek appears to be successful demonstrating meaningful collaboration between numerous groups including Lake Babine Nation, Spruce City Wildlife Association, the Ministry of Transportation and Infrastructure, Fisheries and Oceans Canada and Canadian Wildlife Federation. The streambed appears to be filling in well following one year of flows since restoration and at the time of assessment in 2022, numerous sockeye and kokanee were observed spawning upstream of the crossing. Follow up is recommended in 2023 to determine success of naturally regenerating riparian cottonwood seedlings as well as cuttings planted within the soil arched structure.
+
+
 <br>
 
 ```{r photo-198283-01-prep}
@@ -464,10 +484,16 @@ my_site <- 198400
 
 PSCIS crossing 198400 is located on Five Mile Creek under Highway 97 approximately 11km east of Williams Lake within the San Jose River watershed group (Figures \@ref(fig:map-overview) - \@ref(fig:lidar-5mile).  The structure is located within the boundaries of the Williams Lake 1 First Nation Reservation. The area around Five Mile Creek is home to T’exelcemc people of the T'exelc First Nation. The T'exelc First Nation (also known as the Williams Lake Indian Band) is part of the larger Secwepemc (Shuswap) Nation with traditional territory covering a vast area of central British Columbia. Secwepemctsin is the language of the Secwepem. It contains the cultural, ecological, and historical knowledge connecting the land and the people [@texelcemc2023; @firstpeoplesculturalcouncil2023]. The Five Mile Creek watershed upstream of the Highway encompasses three other First Nations reserve areas including Five Mile 3, James Louis 3A and Carpenter Mountain 15. Replacement of the historic structure (900mm round culvert) in 2016 was necessary to four-laneing Highway 97.
 
+<br>
+
+```{r map-5mile, fig.cap = 'Map of Five Mile Creek watershed.',eval=T}
+knitr::include_graphics("fig/5mile.png")
+```
+
 
 <br>
 
-```{r lidar-5mile, fig.cap = 'Lidar generated digital elevation model of Bittner Creek at Foreman Road.',eval=T}
+```{r lidar-5mile, fig.cap = 'Lidar generated digital elevation model of Five Mile Creek at Highway 97.',eval=T}
 knitr::include_graphics("fig/lidar_5mile.png")
 ```
 
@@ -476,11 +502,15 @@ Five Mile Creek flows into Borland Creek approximately 800m downstream of the hi
 
 <br>
 
-On Five Mile Creek Between the highway and the San Jose River there are two previously unassessed crossings modelled as closed bottom structures. The first (`modelled_crossing_id` 17500597) is modelled as 300m downstream and the second (`modelled_crossing_id` 17500595) is modelled as located approximately 1km downstream.
+On Five Mile Creek Between the highway and the San Jose River there are two previously unassessed crossings modelled as closed bottom structures. The first (`modelled_crossing_id` 17500597) is modelled as 300m downstream and the second (`modelled_crossing_id` 17500595) is modelled as located approximately 1km downstream. There are numerous unassessed modelled crossings upstream of the highway as well as four dams documented between approximately 4km and 10km upstream of the highway.  
 
 <br>
 
-At crossing `r as.character(my_site)`, Five Mile Creek is a `r fpr::fpr_my_bcfishpass(site = 17501664, col_filter = modelled_crossing_id) %>% english::ordinal()` order stream with a watershed area upstream of the crossing of approximately `r fpr::fpr_my_wshd(site = 999)`km^2^. The elevation of the watershed ranges from a maximum of `r fpr::fpr_my_wshd(col = 'elev_max', site = 999)`m to `r fpr::fpr_my_wshd(col = 'elev_site', site = 999)`m at the crossing (Table \@ref(tab:tab-wshd-198400)). Upstream of the crossing `r fpr::fpr_my_fish_sp(site = 17501664, col_filter = modelled_crossing_id, col_pull = observedspp_dnstr)` have been recorded [@moe2023KnownBC; @norris2023smnorrisbcfishobs]. Numerous lakes and wetlands are located in the Five Mile Creek watershed including Dugan Lake (96ha), Goldpan Lake (41ha) and Cariboo Bill Lake (30ha). Flows at the time of the survey were
+At crossing `r as.character(my_site)`, Five Mile Creek is a `r fpr::fpr_my_bcfishpass(site = 17501664, col_filter = modelled_crossing_id) %>% english::ordinal()` order stream with a watershed area upstream of the crossing of approximately `r fpr::fpr_my_wshd(site = 999)`km^2^. The elevation of the watershed ranges from a maximum of `r fpr::fpr_my_wshd(col = 'elev_max', site = 999)`m to `r fpr::fpr_my_wshd(col = 'elev_site', site = 999)`m at the crossing (Table \@ref(tab:tab-wshd-198400)). Upstream of the crossing `r fpr::fpr_my_fish_sp(site = 17501664, col_filter = modelled_crossing_id, col_pull = observedspp_dnstr)` have been recorded [@moe2023KnownBC; @norris2023smnorrisbcfishobs]. Numerous lakes and wetlands are located in the Five Mile Creek watershed including Dugan Lake (96ha), Goldpan Lake (41ha) and Cariboo Bill Lake (30ha). 
+
+<br>
+
+On assignment from Ministry of Transportation and Infrastructure in 2010, @tritonenvironmentalconsultantsltd_2014Highway97 captured rainbow trout downstream of the culvert with minimal effort however no fish were captured upstream of the crossing with 108 seconds of electrofishing effort. @caribouenvirotechltd_2005LakeStream sampled Five Mile Creek and an unnamed lake (00089SAJR) located approximately 5km upstream of the highway to provide information related to planning for construction of a dam on the lake. They documented taht the portion of Five Mile Creek located immediately downstream of the unnamed lake was a man-made ditch divided into drainage channels for water dispersal downstream. The noted that water temperatures were likely to be very high in the summer months and ranked the habitat value as "very poor". 
 
 <br>
 
@@ -492,11 +522,13 @@ fpr::fpr_table_wshd_sum(site_id = 999) %>%
 ```
 
 ### Crossing Characteristics
-Although not docuemtnded in the PSCIS database, before remediation, the Five Mile Creek culvert at PSCIS crossing `r as.character(my_site)` was documented as 0.9m wide, 48 m long round non-embedded culvert with a gradient of 3%.  Although the site was not The crossing ranked as a barrier to upstream migration according to the provincial protocol [@moe2011Fieldassessment].  Photos taken in 2017 - before the remediation was completed are included as Figure \@ref(fig:photo-cross-cv). 
+
+
+Although not documented in the PSCIS database, before remediation, @tritonenvironmentalconsultantsltd_2014Highway97 reported that the Five Mile Creek culvert at PSCIS crossing `r as.character(my_site)` was a 1.0m diameter, 45m long, round, non-embedded culvert with a gradient of 3% and ranked as a barrier to upstream migration according to the provincial protocol [@moe2011Fieldassessment].  However, @tritonenvironmentalconsultantsltd_2014Highway97 also reported that the culvert was "likely passable to adult fish during most flow conditions with the exceptions of freshet or flood flow".
 
 <br>
 
-In 2022, the site was reassessed. As PSCIS crossing `r as.character(my_site)` was a newly installed open bottomed structure it ranked as a `r fpr::fpr_my_pscis_info(dat = pscis_reassessments, col_pull = barrier_result) %>% stringr::str_to_lower()` to upstream fish passage according to the provincial protocol (Table \@ref(tab:tab-culvert-198283)). 
+The highway crossing on Five Mile Creek was assessed on September 16, 2022. PSCIS crossing `r as.character(my_site)` was embedded 80cm at the outlet of the culvert with no embeddedness at the inlet.  Due to the length of the 2.25m diameter round pipe (55m), a lack of embeddedness and culvert slope (3%) the structure ranked as a barrier to upstream fish passage according to the provincial protocol (Table \@ref(tab:tab-culvert-198283)). 
 
 <br>
 
@@ -508,7 +540,7 @@ fpr::fpr_table_cv_summary_memo(dat = pscis_phase1, site = 17501664, col_filter =
 
 ### Stream Characteristics
 
-Upstream of the highway, the stream was surveyed for `r fpr::fpr_my_priority_info(loc = 'us', col_pull = 'length_surveyed')`m. `r fpr_my_habitat_paragraph(loc = 'us')` Water temperature was `r fpr::fpr_my_habitat_info(col_pull = 'temperature_c', loc = 'us')`$^\circ$C, pH was `r fpr::fpr_my_habitat_info(col_pull = 'p_h', loc = 'us')` and conductivity was `r fpr::fpr_my_habitat_info(col_pull = 'conductivity_m_s_cm', loc = 'us')`uS/cm. `r fpr_my_habitat_paragraph()` (Table \@ref(tab:tab-habitat-summary-198400)).
+Upstream of the highway, the stream was surveyed for `r fpr::fpr_my_priority_info(loc = 'us', col_pull = 'length_surveyed')`m. `r fpr_my_habitat_paragraph(loc = 'us')`    Water temperature was `r fpr::fpr_my_habitat_info(col_pull = 'temperature_c', loc = 'us')`$^\circ$C, pH was `r fpr::fpr_my_habitat_info(col_pull = 'p_h', loc = 'us')` and conductivity was `r fpr::fpr_my_habitat_info(col_pull = 'conductivity_m_s_cm', loc = 'us')`uS/cm. `r fpr_my_habitat_paragraph()` (Table \@ref(tab:tab-habitat-summary-198400)). At the time of the survey flows were high (bankfull depth) due to recent rain events and the water was very turbid.  Habitat value was assessed as low due to poor water quality and the small size of the stream.
 
 <br>
 
@@ -519,6 +551,17 @@ tab_hab_summary %>%
                  scroll = F) 
 
 ```
+
+<br>
+
+### Discussion
+
+Five Mile Creek is a small system utilized by rainbow trout near the highway.  High levels of turbidity noted during the site visit along with past reporting by @caribouenvirotechltd_2005LakeStream, @tritonenvironmentalconsultantsltd_2014Highway97 indicate that the area upstream of the crossing had been impacted by fire, cattle use of riparian areas and the installation of dams and associated water drainage structures.
+
+<br>
+
+Replacement of crossing structures for small streams on large highways can be extremely expensive, requiring significant resources and time to complete. Although not ideal for facilitating upstream fish migration, horizontal drilling of pipes (versus the installation of open bottom structures) can help reduce costs related to construction and proper embedding of these pipes with substrate similiar to that found in adjacent natural reaches can provide conditions suitable for upstream fish migration.  Although the highway crossing ranked as a barrier to upstream migration, embedding the pipe for its full length would result in a ranking of "potential" barrier and likely provide channel roughness conditions suitable for all life stages of rainbow trout to migrate upstream. For this reason we recommend the addition of large cobble and boulder substrate at the upstream end of the pipe.  We also recommend that silt fencing installed for erosion and sediment control during construction be removed at the same time.
+
 <br>
 
 ```{r photo-198400-01-prep}
