@@ -129,7 +129,9 @@ my_photo1 = fpr::fpr_photo_pull_by_str(site = '196200/before', str_to_pull = 'cr
 
 my_caption1 = paste0('Photos of culverts on Cross Creek taken in August 2014 before remediation of site.')
 
-grid::grid.raster(jpeg::readJPEG(my_photo1))
+knitr::include_graphics(my_photo1)
+# grid::grid.raster(jpeg::readJPEG(my_photo1))
+
 ```
 
 <br>
@@ -195,7 +197,10 @@ my_caption2 = paste0('Habitat downstream of PSCIS crossing ', my_site, ', on Bit
 ```
 
 ```{r photo-196200-02, fig.cap= my_caption2, out.width = photo_width, eval=gitbook_on}
-grid::grid.raster(jpeg::readJPEG(my_photo2))
+
+knitr::include_graphics(my_photo2)
+# grid::grid.raster(jpeg::readJPEG(my_photo2))
+
 ```
 
 ```{r photo-196200-u02, fig.cap = my_caption, fig.show="hold", out.width= c("49.5%","1%","49.5%"), eval=identical(gitbook_on, FALSE)}
@@ -216,7 +221,9 @@ my_caption1 = paste0('Downstream view of location of historic outlet pool on Bit
 ```
 
 ```{r photo-196200-03, fig.cap= my_caption1, out.width = photo_width, eval=gitbook_on}
-grid::grid.raster(jpeg::readJPEG(my_photo1))
+knitr::include_graphics(my_photo1)
+# grid::grid.raster(jpeg::readJPEG(my_photo1))
+
 ```
 
 <br>
@@ -229,7 +236,9 @@ my_caption2 = paste0('Salmonid parr observed upstream of bridge on Bittner Creek
 ```
 
 ```{r photo-196200-04, fig.cap= my_caption2, out.width = photo_width, eval=gitbook_on}
-grid::grid.raster(jpeg::readJPEG(my_photo2))
+knitr::include_graphics(my_photo2)
+# grid::grid.raster(jpeg::readJPEG(my_photo2))
+
 ```
 
 ```{r photo-196200-u04, fig.cap = my_caption, fig.show="hold", out.width= c("49.5%","1%","49.5%"), eval=identical(gitbook_on, FALSE)}
@@ -250,7 +259,11 @@ my_caption1 = paste0('Typical habitat upstream of Foreman Road bridge on Bittner
 ```
 
 ```{r photo-196200-05, fig.cap= my_caption1, out.width = photo_width, eval=gitbook_on}
-grid::grid.raster(jpeg::readJPEG(my_photo1))
+
+knitr::include_graphics(my_photo1)
+
+# grid::grid.raster(jpeg::readJPEG(my_photo1))
+
 ```
 
 <br>
@@ -263,7 +276,9 @@ my_caption2 = paste0('Typical habitat upstream of Foreman Road bridge on Bittner
 ```
 
 ```{r photo-196200-06, fig.cap= my_caption2, out.width = photo_width, eval=gitbook_on}
-grid::grid.raster(jpeg::readJPEG(my_photo2))
+knitr::include_graphics(my_photo1)
+# grid::grid.raster(jpeg::readJPEG(my_photo2))
+
 ```
 
 ```{r photo-196200-u05, fig.cap = my_caption, fig.show="hold", out.width= c("49.5%","1%","49.5%"), eval=identical(gitbook_on, FALSE)}
@@ -332,7 +347,11 @@ my_photo1 = fpr::fpr_photo_pull_by_str(site = '198283/before', str_to_pull = 'cr
 
 my_caption1 = paste0('Photos of culverts on Cross Creek taken in November 2017 before remediation of site.')
 
-grid::grid.raster(jpeg::readJPEG(my_photo1))
+knitr::include_graphics(my_photo1)
+
+
+# grid::grid.raster(jpeg::readJPEG(my_photo1))
+
 ```
 
 <br>
@@ -417,7 +436,9 @@ my_caption1 = paste0('Typical habitat downstream of PSCIS crossing ', my_site, '
 ```
 
 ```{r photo-198283-01, fig.cap= my_caption1, out.width = photo_width, eval=gitbook_on}
-grid::grid.raster(jpeg::readJPEG(my_photo1))
+knitr::include_graphics(my_photo1)
+# grid::grid.raster(jpeg::readJPEG(my_photo1))
+
 ```
 
 <br>
@@ -430,7 +451,9 @@ my_caption2 = paste0('Typical habitat downstream of PSCIS crossing ', my_site, '
 ```
 
 ```{r photo-198283-02, fig.cap= my_caption2, out.width = photo_width, eval=gitbook_on}
-grid::grid.raster(jpeg::readJPEG(my_photo2))
+knitr::include_graphics(my_photo2)
+# grid::grid.raster(jpeg::readJPEG(my_photo2))
+
 ```
 
 ```{r photo-198283-u02, fig.cap = my_caption, fig.show="hold", out.width= c("49.5%","1%","49.5%"), eval=identical(gitbook_on, FALSE)}
@@ -451,7 +474,9 @@ my_caption1 = paste0('Habitat upstream of PSCIS crossing ', my_site, ' in Cross 
 ```
 
 ```{r photo-198283-03, fig.cap= my_caption1, out.width = photo_width, eval=gitbook_on}
-grid::grid.raster(jpeg::readJPEG(my_photo1))
+knitr::include_graphics(my_photo1)
+# grid::grid.raster(jpeg::readJPEG(my_photo1))
+
 ```
 
 <br>
@@ -464,7 +489,9 @@ my_caption2 = paste0('Habitat immediately upstream of PSCIS crossing ', my_site,
 ```
 
 ```{r photo-198283-04, fig.cap= my_caption2, out.width = photo_width, eval=gitbook_on}
-grid::grid.raster(jpeg::readJPEG(my_photo2))
+knitr::include_graphics(my_photo2)
+# grid::grid.raster(jpeg::readJPEG(my_photo2))
+
 ```
 
 ```{r photo-198283-u04, fig.cap = my_caption, fig.show="hold", out.width= c("49.5%","1%","49.5%"), eval=identical(gitbook_on, FALSE)}
@@ -574,7 +601,10 @@ my_caption1 ='Habitat within construction footprint upstream of PSCIS crossing 1
 ```
 
 ```{r photo-198400-01, fig.cap= my_caption1, out.width = photo_width, eval=gitbook_on}
-grid::grid.raster(jpeg::readJPEG(my_photo1))
+
+knitr::include_graphics(my_photo1)
+# grid::grid.raster(jpeg::readJPEG(my_photo1))
+
 ```
 
 <br>
@@ -587,7 +617,9 @@ my_caption2 = 'Habitat upstream of construction footprint adjacent to crossing 1
 ```
 
 ```{r photo-198400-02, fig.cap= my_caption2, out.width = photo_width, eval=gitbook_on}
-grid::grid.raster(jpeg::readJPEG(my_photo2))
+knitr::include_graphics(my_photo2)
+# grid::grid.raster(jpeg::readJPEG(my_photo2))
+
 ```
 
 ```{r photo-198400-u02, fig.cap = my_caption, fig.show="hold", out.width= c("49.5%","1%","49.5%"), eval=identical(gitbook_on, FALSE)}
