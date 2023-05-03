@@ -1,8 +1,10 @@
 
 
 # Background
-Study areas for 2022 field work included Cross Creek on the west shore of Babine Lake in the Babine Lake Watershed Group, Bittner Creek, within the Prince George city limits in the Tabor River watershed group and Five Mile Creek located approximately 11km east of the town of Williams Lake within the San Jose River watershed group. Road stream crossing structures at the three locations have been replaced in the last 10 years.  The intention of the work was to provide information regarding the effectiveness of structure replacements in regards to facilitating upstream fish migration as well as to describe habitat conditions related to work areas potentially impacted by structure replacement works.  
+Study areas for 2022 field work included Cross Creek on the west shore of Babine Lake in the Babine Lake Watershed Group, Bittner Creek, within the Prince George city limits in the Tabor River watershed group and Five Mile Creek located approximately 11km east of the town of Williams Lake within the San Jose River watershed group (Figure \@ref(fig:map-overview)) . Road stream crossing structures at the three locations have been replaced in the last 10 years.  The intention of the work was to provide information regarding the effectiveness of structure replacements in regards to facilitating upstream fish migration as well as to describe habitat conditions related to work areas potentially impacted by structure replacement works.  
+
+<br>
 
 ```{r map-overview, fig.cap = 'Map of monitoring site locations.',eval=T}
-knitr::include_graphics("fig/overview_mot_2022b.png")
+knitr::include_graphics("fig/overview_mot_2022.png")
 ```

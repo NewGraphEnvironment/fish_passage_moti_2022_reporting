@@ -1,5 +1,7 @@
 # Methods
 
+Assessment methods for monitoring are considered preliminary and subject to revision over time.  Assessment methodologies included fish passage assessments [@fish_passage_assessments], rapid habitat assessments [@resourcesinventorycommittee2001Reconnaissance20] and data gathering related to a suite of custom monitoring metrics which include some paramaters adapted from @forestinvestmentaccount2003.
+
 ## Fish Passage Assessments
 
 In the field, crossings prioritized for follow-up were first assessed for fish passage following the procedures outlined in “Field Assessment for Determining Fish Passage Status of Closed Bottomed Structures” [@fish_passage_assessments]. Crossings surveyed included closed bottom structures (CBS), open bottom structures (OBS) and crossings considered “other” (i.e. fords).  Photos were taken at surveyed crossings and when possible included images of the road, crossing inlet, crossing outlet, crossing barrel, channel downstream and channel upstream of the crossing and any other relevant features.  The following information was recorded for all surveyed crossings: date of inspection, crossing reference, crew member initials, Universal Transverse Mercator (UTM) coordinates, stream name, road name and kilometer, road tenure information, crossing type, crossing subtype, culvert diameter or span for OBS, culvert length or width for OBS.  A more detailed “full assessment” was completed for all closed bottom structures and included the following parameters: presence/absence of continuous culvert embedment (yes/no), average depth of embedment, whether or not the culvert bed resembled the native stream bed, presence of and percentage backwatering, fill depth, outlet drop, outlet pool depth, inlet drop, culvert slope, average downstream channel width, stream slope, presence/absence of beaver activity, presence/absence of fish at time of survey, type of valley fill, and a habitat value rating.  Habitat value ratings were based on channel morphology, flow characteristics (perennial, intermittent, ephemeral), fish migration patterns, the presence/absence of deep pools, un-embedded boulders, substrate, woody debris, undercut banks, aquatic vegetation and overhanging riparian vegetation (Table \@ref(tab:tab-hab-value)).  For crossings determined to be potential barriers or barriers based on the data (see [Barrier Scoring]), a culvert fix and recommended diameter/span was proposed.  
@@ -50,11 +52,23 @@ fpr::fpr_table_barrier_result %>%
 
 ## Habitat Assessments
 
-Habitat was assessed rapidly with characteristics documented included channel morphology, flow characteristics (perennial, intermittent, ephemeral), the presence/absence of deep pools, un-embeddedboulders, substrate, woody debris, undercut banks, aquatic vegetation and overhanging riparian vegetation. A key goal of the assessments was to gather stream width information upstream and downstream of the stream crossing structures to provide information regarding stream channel constriction through road/stream crossing structures as this can hinder upstream fish migration.  To standardize data collected and facilitate submission of the data to provincial databases, information was collected on ["Site Cards"](https://www2.gov.bc.ca/gov/content/environment/natural-resource-stewardship/laws-policies-standards-guidance/inventory-standards/aquatic-ecosystems). Additional habitat characteristics recorded included channel widths, wetted widths, residual pool depths, gradients, bankfull depths, stage, temperature, conductivity, pH, cover by type, substrate and channel morphology (among others). When possible, the crew surveyed downstream of the crossing to the point where fish presence had been previously confirmed and upstream to a minimum distance of 600m. Any  potential  obstacles  to  fish  passage  were  inventoried  with  photos, physical  descriptions and locations recorded on site cards.  Surveyed routes were recorded with time-signatures on handheld GPS units.   
+Habitat was assessed rapidly according to @resourcesinventorycommittee2001Reconnaissance20 with characteristics documented included channel morphology, flow characteristics (perennial, intermittent, ephemeral), the presence/absence of deep pools, substrate, woody debris, undercut banks, aquatic vegetation and overhanging riparian vegetation. A key goal of the assessments was to gather stream width information upstream and downstream of the stream crossing structures to provide information regarding stream channel constriction through road/stream crossing structures as this can hinder upstream fish migration.  To standardize data collected and facilitate submission of the data to provincial databases, information was collected on ["Site Cards"](https://www2.gov.bc.ca/gov/content/environment/natural-resource-stewardship/laws-policies-standards-guidance/inventory-standards/aquatic-ecosystems). Additional habitat characteristics recorded included channel widths, wetted widths, residual pool depths, gradients, bankfull depths, stage, temperature, conductivity, pH, cover by type, substrate and channel morphology (among others). When possible, the crew surveyed downstream of the crossing to the point where fish presence had been previously confirmed and upstream to a minimum distance of 600m. Any  potential  obstacles  to  fish  passage  were  inventoried  with  photos, physical  descriptions and locations recorded on site cards.  Surveyed routes were recorded with time-signatures on handheld GPS units.   
 
-<br>
 
 ## Monitoring Metrics
+Custom monitoring metrics were adapted from forestinvestmentaccount2003 (Table \@ref(tab:tab-monitor-sum)).
+
+```{r tab-mon-metrics}
+readr::read_csv('data/form_monitoring_desc.csv') %>% 
+ mutate(Parameter = stringr::str_to_title(Parameter)) %>% 
+  mutate(Parameter = case_when( Parameter == "Uav_flight" ~ "UAV Flight",
+                                T ~ Parameter)) %>% 
+  fpr::fpr_kable(scroll = F,
+                 caption_text = 'Description of monitoring metrics used for effectiveness monitoring.')
+
+
+```
+
 
 ## Reporting
 

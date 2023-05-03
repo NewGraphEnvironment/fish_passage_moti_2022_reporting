@@ -13,7 +13,8 @@ mon_sum_raw <- readr::read_csv('data/form_monitoring.csv') %>%
          northing,
          diameter_or_span_m = diameter_or_span_meters,
          length_or_width_m = length_or_width_meters,
-         dewatering:maintenance) %>% 
+         dewatering:maintenance,
+         recommendations) %>% 
   mutate(diameter_or_span_m = janitor::round_half_up(diameter_or_span_m, 1))
   # rename(site = pscis_crossing_id) 
 
@@ -60,14 +61,14 @@ mon_metrics %>%
 
 
 
-## Bittner Creek - PSCIS crossing 196200 
+## Bittner Creek - 196200 
 
 ```{r  load-data-196200}
 my_site <- 196200
 ```
 
 PSCIS crossing 196200 on Bittner Creek is located on Foreman Road  within the municiple boundaries of the City of Prince George approximately `r round(fpr::fpr_my_bcfishpass(col_pull = downstream_route_measure)*0.001, 1)`km
-upstream from the confluence with the Fraser River (Figure \@ref(fig:lidar-bittner)). In 2016, just downstream of the subject crossing, the banks of Bittner Creek were armoured to stabilize two areas of erosion. To compensate for the net negative habitat balance of the project, the replacement of the culvert on Bittner Creek was included as a habitat enhancement in the habitat offsetting plan associated with permitting of the work.
+upstream from the confluence with the Fraser River (Figures \@ref(fig:map-overview) - \@ref(fig:lidar-bittner)). In 2016, just downstream of the subject crossing, the banks of Bittner Creek were armoured to stabilize two areas of erosion. To compensate for the net negative habitat balance of the project, the replacement of the culvert on Bittner Creek was included as a habitat enhancement in the habitat offsetting plan associated with permitting of the work.
 
 
 <br>
@@ -141,9 +142,11 @@ Habitat characteristics were gathered upstream and downstream of the Foreman Roa
 
 <br>
 
-Downstream of the bridge, the stream was surveyed for `r fpr::fpr_my_priority_info(loc = 'ds', col_pull = 'length_surveyed')`m. 
+Downstream of the bridge, the stream was surveyed for `r fpr::fpr_my_priority_info(loc = 'ds', col_pull = 'length_surveyed')`m. `r `fpr_my_habitat_paragraph('ds')` 
 
 <br>
+
+The area downstream adjacent to the bridge was lacking meaningful riparian vegetation due to a lack of shrub/tree installation into riprap areas during construction and the size of the channel in this location (due to infilling of historic large outlet pool).
 
 
 ```{r tab-habitat-summary-196200, eval=T}
@@ -154,6 +157,7 @@ tab_hab_summary %>%
 
 ```
 
+<br>
 
 ```{r photo-196200-01-prep}
 
@@ -256,7 +260,7 @@ knitr::include_graphics("fig/pixel.png")
 knitr::include_graphics(my_photo2)
 ```
 
-## Cross Creek - PSCIS crossing 198283
+## Cross Creek - 198283
 ```{r  load-data-198283}
 my_site <- 198283
 ```
@@ -275,8 +279,15 @@ knitr::include_graphics("fig/elk_weigert_2022b.png")
 ```
 
 
-PSCIS crossing `r as.character(my_site)` on Cross Creek is located on Babine Lake Road, approximately 30km north-east of the town of
-Burns Lake (45 minute drive). At the time of reporting, the mapping for the stream was slightly incorrect with the site located approximately 100m to the north of where shown in the BC freshwater atlas and within Babine Lake Marine Provincial Park - Pendleton Bay Site boundaries. The road is the responsibility of the Ministry of Transportation and Infrastructure.
+PSCIS crossing `r as.character(my_site)` on Cross Creek is located on Babine Lake Road, approximately 30km north-east (45 minute drive) of the town of Burns Lake (Figure \@ref(fig:map-overview)). A map of the watershed (see modelled crossing id 500059) is provided in map attachment [`r fpr::fpr_my_bcfishpass(col_pull = dbm_mof_50k_grid)`](`r fpr::fpr_my_mapsheet(wshd = "babl", archive_date = "2022-09-06")`). At the time of reporting, the mapping for the stream was slightly incorrect with the site located approximately 100m to the north of where shown in the BC freshwater atlas and within Babine Lake Marine Provincial Park - Pendleton Bay Site boundaries. The road is the responsibility of the Ministry of Transportation and Infrastructure.
+
+<br>
+
+PSCIS crossing `r as.character(my_site)` was identified by the Lake Babine Nation, Dustin Snyder (Spruce City Wildlife Association) as a barrier to fish passage blocking sockeye attempting to spawn annually and brought to the attention of the Ministry of Transportation and Infrastructure.  The Ministry of Transportation and Infrastructure worked together with Fisheries and Oceans Canada and Canadian Wildlife Federation to plan and implement replacement of the existing culverts with an open bottomed geotextile soil arched reinforced structure designed by Terratech Consulting Ltd in the summer of 2021.  A short video documents the story [here](https://www.youtube.com/watch?v=m--Q-WFt0As&list=PLY-KTbpNXtBFU0Sey9vLs8ljL83ZvyXSk&index=1).  
+
+<br>
+
+An impassible 9m falls is located on the mainstem of the stream approximately 1km upstream of Babine Lake Road [@finsconsultingltd_2000Reconnaissance20; @moe2023ProvincialObstacles].  There are no other stream crossings modelled between the road and the falls.  Upstream of the crossing `r fpr::fpr_my_fish_sp()` have been recorded [@moe2023KnownBC; @norris2023smnorrisbcfishobs].  
 
 <br>
 
@@ -294,44 +305,10 @@ fpr::fpr_table_wshd_sum(site_id = my_site) %>%
 
 <br>
 
-PSCIS crossing `r as.character(my_site)` was identified by the Lake Babine Nation, Dustin Snyder (Spruce City Wildlife Association) as a barrier to fish passage blocking sockeye attempting to spawn annually and brought to the attention of the Ministry of Transportation and Infrastructure.  The Ministry of Transportation and Infrastructure worked together with Fisheries and Oceans Canada and Canadian Wildlife Federation to plan and implement replacement of the existing culverts with an open bottomed geotextile soil arched reinforced structure designed by Terratech Consulting Ltd in the summer of 2021.  A short video documents the story [here](https://www.youtube.com/watch?v=m--Q-WFt0As&list=PLY-KTbpNXtBFU0Sey9vLs8ljL83ZvyXSk&index=1).  
-
-<br>
-
-An impassible 9m falls is located on the mainstem of the stream approximately 1km upstream of Babine Lake Road [@finsconsultingltd_2000Reconnaissance20; @moe2023ProvincialObstacles].  There are no other stream crossings modelled between the road and the falls.  Upstream of the crossing `r fpr::fpr_my_fish_sp()` have been recorded [@moe2023KnownBC; @norris2023smnorrisbcfishobs].   Habitat modelling outputs are provided in Table \@ref(tab:tab-culvert-bcfp-198283) and a map of the watershed (see modelled crossing id 500059) is provided in map attachment [`r fpr::fpr_my_bcfishpass(col_pull = dbm_mof_50k_grid)`](`r fpr::fpr_my_mapsheet(wshd = "babl", archive_date = "2022-09-06")`).
-
-
-`r if(identical(gitbook_on, FALSE)){knitr::asis_output("\\pagebreak")}`
-
-
-<br>
-
-
-```{r tab-culvert-bcfp-198283, eval = T}
-# A summary of habitat modelling outputs is presented in Table \@ref(tab:tab-culvert-bcfp-198283) and a
-fpr::fpr_table_bcfp(scroll = gitbook_on) 
-```
-
-<br>
-
 ### Crossing Characteristics  
 
-Before remediation, the Cross Creek culverts at PSCIS crossing `r as.character(my_site)` were documented as 1.8m wide ovals culverts of 12.4m in length, having an outlet drop of 0.45m and a culvert slope of 2% [@moe2023PSCISAssessments].  The crossing ranked as a barrier to upstream migration according to the provincial protocol [@moe2011Fieldassessment].  Photos taken in 2017 - before the remediation was completed are included as Figure \@ref(fig:photo-cross-cv). 
+Before remediation, the Cross Creek culverts at PSCIS crossing `r as.character(my_site)` were documented as 1.8m wide ovals culverts of 12.4m in length, having an outlet drop of 0.45m and a culvert slope of 2% [@moe2023PSCISAssessments].  The crossing ranked as a barrier to upstream migration according to the provincial protocol [@moe2011Fieldassessment].  Photos taken in 2017 - before the remediation was completed are included as Figure \@ref(fig:photo-cross-cv). In 2022, the site was reassessed. As PSCIS crossing `r as.character(my_site)` was a newly installed open bottomed structure it ranked as a `r fpr::fpr_my_pscis_info(dat = pscis_reassessments, col_pull = barrier_result) %>% stringr::str_to_lower()` to upstream fish passage according to the provincial protocol (Table \@ref(tab:tab-culvert-198283)). 
 
-<br>
-
-In 2022, the site was reassessed. As PSCIS crossing `r as.character(my_site)` was a newly installed open bottomed structure it ranked as a `r fpr::fpr_my_pscis_info(dat = pscis_reassessments, col_pull = barrier_result) %>% stringr::str_to_lower()` to upstream fish passage according to the provincial protocol (Table \@ref(tab:tab-culvert-198283)). 
-
-<br>
-
-
-
-Surveys were conducted with a remotely piloted aircraft upstream of the crossing with resulting images stitched into an orthomosaic and 3-dimensional model `r if(gitbook_on){knitr::asis_output(" presented in Figures \\@ref(fig:ortho-caption-cross) - \\@ref(fig:model-caption-cross).")} else knitr::asis_output("presented [here](https://www.mapsmadeeasy.com/maps/public/bc05b8efed3f42f28fced92614b08edd) and [here](https://www.mapsmadeeasy.com/maps/public_3D/bc05b8efed3f42f28fced92614b08edd).")`
-
-<br>
-
-### Stream Characteristics {-}      
-`r fpr_my_habitat_paragraph(loc = 'ds')` Water temperature was `r fpr::fpr_my_habitat_info(col_pull = 'temperature_c', loc = 'ds')`$^\circ$C, pH was `r fpr::fpr_my_habitat_info(col_pull = 'p_h', loc = 'ds')` and conductivity was `r fpr::fpr_my_habitat_info(col_pull = 'conductivity_m_s_cm', loc = 'ds')`uS/cm.
 
 <br>
 
@@ -349,6 +326,21 @@ grid::grid.raster(jpeg::readJPEG(my_photo1))
 fpr::fpr_table_cv_summary_memo(dat = pscis_reassessments)
 
 ```
+
+
+<br>
+
+
+
+Surveys were conducted with a remotely piloted aircraft upstream of the crossing with resulting images stitched into an orthomosaic and 3-dimensional model `r if(gitbook_on){knitr::asis_output(" presented in Figures \\@ref(fig:ortho-caption-cross) - \\@ref(fig:model-caption-cross).")} else knitr::asis_output("presented [here](https://www.mapsmadeeasy.com/maps/public/bc05b8efed3f42f28fced92614b08edd) and [here](https://www.mapsmadeeasy.com/maps/public_3D/bc05b8efed3f42f28fced92614b08edd).")`
+
+
+<br>
+
+### Stream Characteristics {-}      
+`r fpr_my_habitat_paragraph(loc = 'ds')` Water temperature was `r fpr::fpr_my_habitat_info(col_pull = 'temperature_c', loc = 'ds')`$^\circ$C, pH was `r fpr::fpr_my_habitat_info(col_pull = 'p_h', loc = 'ds')` and conductivity was `r fpr::fpr_my_habitat_info(col_pull = 'conductivity_m_s_cm', loc = 'ds')`uS/cm.  
+
+<br>
 
 
 ```{r ortho-198283, eval = identical(gitbook_on, TRUE)}
@@ -384,14 +376,12 @@ knitr::include_graphics(my_photo, dpi = NA)
 ```
 
 
-
-
 <br>
 
 ```{r tab-habitat-summary-198283, eval=T}
 tab_hab_summary %>% 
-  filter(Site %like% my_site) %>%
-  fpr::fpr_kable(caption_text = paste0('Summary of habitat details for ara surveyed downstream of PSCIS crossing ', my_site, ' on Cross Creek as well as within the replacement open bottomed structure (198283_x).'),
+  filter(Site == '198283_ds') %>%
+  fpr::fpr_kable(caption_text = paste0('Summary of habitat details for area surveyed downstream of PSCIS crossing ', my_site, ' on Cross Creek as well as within the replacement open bottomed structure (198283_x).'),
                  scroll = F) 
 
 ```
@@ -465,17 +455,22 @@ knitr::include_graphics(my_photo2)
 ```
 
 
-## Five Mile Creek - PSCIS Crossing 198400
+## Five Mile Creek - 198400
 
 ```{r  load-data-198400}
 my_site <- 198400
 ```
 
 
-PSCIS crossing 198400 is located on Five Mile Creek under Highway 97 approximately 11km east of Williams Lake within the San Jose River watershed group.  The structure is located within the boundaries of the Williams Lake 1 First Nation Reservation. The area around Five Mile Creek is home to T’exelcemc people of the T'exelc First Nation. The T'exelc First Nation (also known as the Williams Lake Indian Band) is part of the larger Secwepemc (Shuswap) Nation with traditional territory covering a vast area of central British Columbia. Secwepemctsin is the language of the Secwepem. It contains the cultural, ecological, and historical knowledge connecting the land and the people [@texelcemc2023; @firstpeoplesculturalcouncil2023]. The Five Mile Creek watershed upstream of the Highway encompasses three other First Nations reserve areas including Five Mile 3, James Louis 3A and Carpenter Mountain 15. Replacement of the historic structure (900mm round culvert) in 2016 was necessary to four-laning Highway 97.
+PSCIS crossing 198400 is located on Five Mile Creek under Highway 97 approximately 11km east of Williams Lake within the San Jose River watershed group (Figures \@ref(fig:map-overview) - \@ref(fig:lidar-5mile).  The structure is located within the boundaries of the Williams Lake 1 First Nation Reservation. The area around Five Mile Creek is home to T’exelcemc people of the T'exelc First Nation. The T'exelc First Nation (also known as the Williams Lake Indian Band) is part of the larger Secwepemc (Shuswap) Nation with traditional territory covering a vast area of central British Columbia. Secwepemctsin is the language of the Secwepem. It contains the cultural, ecological, and historical knowledge connecting the land and the people [@texelcemc2023; @firstpeoplesculturalcouncil2023]. The Five Mile Creek watershed upstream of the Highway encompasses three other First Nations reserve areas including Five Mile 3, James Louis 3A and Carpenter Mountain 15. Replacement of the historic structure (900mm round culvert) in 2016 was necessary to four-laneing Highway 97.
 
 
 <br>
+
+```{r lidar-5mile, fig.cap = 'Lidar generated digital elevation model of Bittner Creek at Foreman Road.',eval=T}
+knitr::include_graphics("fig/lidar_5mile.png")
+```
+
 
 Five Mile Creek flows into Borland Creek approximately 800m downstream of the highway then into the San Jose River a further 2.1km downstream.  The San Jose River in turn empties into Williams Lake approximately 4.5km downstream of the highway.  Although apparently a rare occurrence, due to impacts to Williams Creek which drains Williams Lake, there are reports of sockeye salmon ascending from the Fraser River to Williams Lake and in theory spawning in the San Jose River.  It is thought that these fish are from the Quesnel stock [@williamslaketribune2022].  
 
@@ -503,13 +498,58 @@ Although not docuemtnded in the PSCIS database, before remediation, the Five Mil
 
 In 2022, the site was reassessed. As PSCIS crossing `r as.character(my_site)` was a newly installed open bottomed structure it ranked as a `r fpr::fpr_my_pscis_info(dat = pscis_reassessments, col_pull = barrier_result) %>% stringr::str_to_lower()` to upstream fish passage according to the provincial protocol (Table \@ref(tab:tab-culvert-198283)). 
 
+<br>
+
+```{r tab-culvert-198400, eval = T}
+fpr::fpr_table_cv_summary_memo(dat = pscis_phase1, site = 17501664, col_filter = my_crossing_reference)
+
+```
+
+
 ### Stream Characteristics
 
+Upstream of the highway, the stream was surveyed for `r fpr::fpr_my_priority_info(loc = 'us', col_pull = 'length_surveyed')`m. `r fpr_my_habitat_paragraph(loc = 'us')` Water temperature was `r fpr::fpr_my_habitat_info(col_pull = 'temperature_c', loc = 'us')`$^\circ$C, pH was `r fpr::fpr_my_habitat_info(col_pull = 'p_h', loc = 'us')` and conductivity was `r fpr::fpr_my_habitat_info(col_pull = 'conductivity_m_s_cm', loc = 'us')`uS/cm. `r fpr_my_habitat_paragraph()` (Table \@ref(tab:tab-habitat-summary-198400)).
 
-(Figure \@ref(fig:lidar-5mile) and Table \@ref(tab:tab-habitat-summary-198400).
-Upstream of the highway, the stream was surveyed for `r fpr::fpr_my_priority_info(loc = 'us', col_pull = 'length_surveyed')`m.  `r fpr_my_habitat_paragraph()`
+<br>
 
+```{r tab-habitat-summary-198400, eval=T}
+tab_hab_summary %>% 
+  filter(Site %like% my_site) %>%
+  fpr::fpr_kable(caption_text = paste0('Summary of habitat details for ara surveyed upstream of PSCIS crossing ', my_site, ' on Five Mile Creek.'),
+                 scroll = F) 
 
-```{r lidar-5mile, fig.cap = 'Lidar generated digital elevation model of Bittner Creek at Foreman Road.',eval=T}
-knitr::include_graphics("fig/lidar_5mile.png")
+```
+<br>
+
+```{r photo-198400-01-prep}
+
+my_photo1 = fpr::fpr_photo_pull_by_str(site = my_site, str_to_pull = '_u1_')
+
+my_caption1 ='Habitat within construction footprint upstream of PSCIS crossing 198400 in Five Mile Creek.'
+```
+
+```{r photo-198400-01, fig.cap= my_caption1, out.width = photo_width, eval=gitbook_on}
+grid::grid.raster(jpeg::readJPEG(my_photo1))
+```
+
+<br>
+
+```{r photo-198400-02-prep}
+my_photo2 = fpr::fpr_photo_pull_by_str(site = my_site, str_to_pull = '_u2_')
+
+my_caption2 = 'Habitat upstream of construction footprint adjacent to crossing 198400 in Five Mile Creek.'
+
+```
+
+```{r photo-198400-02, fig.cap= my_caption2, out.width = photo_width, eval=gitbook_on}
+grid::grid.raster(jpeg::readJPEG(my_photo2))
+```
+
+```{r photo-198400-u02, fig.cap = my_caption, fig.show="hold", out.width= c("49.5%","1%","49.5%"), eval=identical(gitbook_on, FALSE)}
+
+my_caption <- paste0('Left: ', my_caption1, ' Right: ', my_caption2)
+
+knitr::include_graphics(my_photo1)
+knitr::include_graphics("fig/pixel.png")
+knitr::include_graphics(my_photo2)
 ```
