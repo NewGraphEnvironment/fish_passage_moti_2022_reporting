@@ -1,0 +1,6 @@
+
+
+#  `r if(gitbook_on){knitr::asis_output("**Attachment 2 - Habitat Assessment Data**")} else knitr::asis_output("**Attachment 3 - Habitat Assessment Data**")` {-}
+
+Raw habitat assessment data included in digital format at https://github.com/NewGraphEnvironment/fish_passage_skeena_2022_reporting/raw/master/data/habitat_confirmations.xls
+

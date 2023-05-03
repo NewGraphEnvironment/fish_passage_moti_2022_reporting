@@ -11,10 +11,8 @@ source('R/packages.R')
 # use an absolute path if you have to but it is preferable to keep our relative paths the same so we can collab
 
 # name the project directory we are pulling from
-dir_project <- 'bcfishpass_elkr_20220904'
+dir_project <- 'bcfishpass_skeena_20220823'
 
-# there are tables with no new events and the types are mangels so remove dataframes with only 1 feature
-form_names_to_remove <- c('form_fiss_site_20220923', 'form_fiss_site_20221006', 'form_fiss_site_202209100809')
 
 # list all the fiss form names in the file
 form_names_l <- list.files(path = paste0('../../gis/mergin/',
@@ -23,9 +21,8 @@ form_names_l <- list.files(path = paste0('../../gis/mergin/',
                            pattern = glob2rx('*site_2022*.gpkg'),
                            full.names = T
                            ) %>%
-  stringr::str_subset('form_fiss_site_20220923', negate = T) %>%
-  stringr::str_subset('form_fiss_site_20221006', negate = T) %>%
-  stringr::str_subset('form_fiss_site_202209100809', negate = T)
+  stringr::str_subset('form_fiss_site_202209072309.gpkg', negate = F)
+
 
 # read all the forms into a list of dataframes using colwise to guess the column types
 # if we don't try to guess the col types we have issues later with the bind_rows join
@@ -35,7 +32,7 @@ form <- form_names_l %>%
   # name the data.frames so we can add it later as a "source" column - we use basename to leave the filepath behind
   purrr::set_names(nm = basename(form_names_l)) %>%
   bind_rows(.id = 'source') %>%
-  readr::write_csv(paste0('data/inputs_extracted/mergin_backups/form_fiss_site_raw_', format(lubridate::now(), "%Y%m%d")))
+  readr::write_csv(paste0('data/inputs_extracted/mergin_backups/form_fiss_site_raw_', format(lubridate::now(), "%Y%m%d"), '.csv'), na = '')
 
 # see the names of our form
 names(form)
@@ -43,7 +40,7 @@ names(form)
 # let's get the names of the input template
 # there is lots of work to do to pull out all the information we can use so we will start with one small step at a time
 # lets just populate the location and site info pages for now and then move on to the other information later.  It should be ok but might take some gymnastics
-form_raw_names_site <- fpr::fpr_import_hab_con(backup = F) %>%
+form_raw_names_site <- fpr::fpr_import_hab_con(backup = F, row_empty_remove = T) %>%
   # pull out just the site info page for now
   pluck(4) %>%
   #see what the types are
@@ -53,7 +50,7 @@ form_raw_names_site <- fpr::fpr_import_hab_con(backup = F) %>%
   names()
 
 # location names
-form_raw_names_location <- fpr::fpr_import_hab_con(backup = F) %>%
+form_raw_names_location <- fpr::fpr_import_hab_con(backup = F, row_empty_remove = T) %>%
   # pull out just the site info page for now
   pluck(1) %>%
   # only keep the names of the columns
@@ -92,16 +89,18 @@ form_site_info_prep <- form %>%
 form_loc <- bind_rows(
 
   # we need the raw form or we don't have all the right columns
-  fpr::fpr_import_hab_con(backup = F) %>%
+  fpr::fpr_import_hab_con(backup = F, row_empty_remove = T) %>%
     # pull out just the site info page for now
     pluck(1) %>%
     # need to convert type for some reason (should be guessed already..)
-    mutate(survey_date = lubridate::as_date(survey_date), alias_local_name = as.character(alias_local_name)) %>%
+    mutate(survey_date = lubridate::as_date(survey_date),
+           alias_local_name = as.character(alias_local_name)) %>%
     slice(0),
 
   form_site_info_prep %>%
     # alias local name is not called the same in both sheets so rename
-    rename(alias_local_name = local_name) %>%
+    rename(alias_local_name = local_name,
+           gazetted_name = gazetted_names) %>%
     select(rowid,
            dplyr::any_of(form_raw_names_location),
            # add the time to help put the puzzle together after
@@ -112,10 +111,11 @@ form_loc <- bind_rows(
 form_site <- bind_rows(
 
   # we need the raw form or we don't have all the right columns
-  fpr::fpr_import_hab_con(backup = F) %>%
+  fpr::fpr_import_hab_con(backup = F, row_empty_remove = T) %>%
     # pull out just the site info page for now - should use the name but will use index bc short on time
     pluck("step_4_stream_site_data") %>%
-    mutate(feature_height_length_method = as.character(feature_height_length_method),
+    mutate(feature_type = as.character(feature_type),
+           feature_height_length_method = as.character(feature_height_length_method),
            l_bank_texture_dominant_2 = as.logical(l_bank_texture_dominant_2),
            r_bank_texture_dominant_2 = as.logical(r_bank_texture_dominant_2),
            morphology = as.logical(morphology)) %>%

@@ -64,13 +64,14 @@ fpr_photo_rename_ext <- function(filescopy, filespaste){
 
 
 ##########################here we back everything up to the D drive###################################################################
-targetdir = paste0("D:/PSCIS/PSCIS_elk_2021_phase1/")
+targetdir = paste0("~/Projects/OneDrive/Projects/PSCIS/PSCIS_moti_2022_phase1")
 dir.create(targetdir)
 
-folderstocreate<- paste0(targetdir, folderstocopy)
+folderstocreate<- paste0(targetdir, '/', folderstocopy)
 
 ##create the folders
 lapply(folderstocreate, dir.create)
+
 
 
 fpr_photos_paths_to_copy <- function(target){
@@ -145,7 +146,7 @@ photos_all %>%
   readr::write_csv(file = paste0(getwd(), '/data/photos/photo_sort_tracking.csv'))
 
 fpr_photo_change_name <- function(filenames_to_change){
-  gsub(filenames_to_change, pattern = paste0(getwd(), '/data/photos/'), replacement = targetdir)
+  gsub(filenames_to_change, pattern = paste0(getwd(), '/data/photos/'), replacement = paste0(targetdir,'/'))
 }
 
 
@@ -169,7 +170,8 @@ mapply(fpr_copy_over_photos,
 
 ##also move over the pscis file
 file.copy(from = 'data/pscis_phase1.xlsm',
-          to = paste0(targetdir, 'pscis_phase1.xlsm'))
+          to = paste0(targetdir, '/pscis_phase1.xlsm'),
+                      overwrite = T)
 
 
 

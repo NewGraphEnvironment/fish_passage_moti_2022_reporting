@@ -1,10 +1,10 @@
 --- 
-title: "Elk River Watershed Group Fish Passage Restoration Planning 2022"
+title: "Effectiveness Monitoring for Cross Creek, Bittner Creek and Five Mile Creek - 2022"
 author: |
  |
  |
  | Prepared for
- | Nupqu Resource Limited Partnership
+ | Ministry of Transportation and Infrastructure
  |
  |
  | Prepared by
@@ -14,7 +14,7 @@ author: |
 
 date: |
  |
- | Version 0.0.5 DRAFT
+ | Version 0.0.1 DRAFT
  | `r format(Sys.Date(), "%Y-%m-%d")`
 toc-title: Table of Contents
 site: bookdown::bookdown_site

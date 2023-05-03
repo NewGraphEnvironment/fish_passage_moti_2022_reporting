@@ -1,16 +1,4 @@
 source('scripts/packages.R')
-##08NK002 is elk river at Fernie  - 08NK016 is near sparwood
-##08NK016
-
-# download_hydat()
-
-##C:\Users\allan\AppData\Local\tidyhydat\tidyhydat
-# C:\Users\al\AppData\Local\tidyhydat\tidyhydat
-
-# hydatr::hydat_load(source = "C://Users//allan//AppData//Local//tidyhydat//tidyhydat") # loads the database (you'll need to call this one each time you load the package)
-# hydatr::hydat_load(source = "C://Users//al//AppData//Local//tidyhydat//tidyhydat") # loads the database (you'll need to call this one each time you load the package)
-
-
 tidyhat_info <- search_stn_name("Five Mile")
 
 

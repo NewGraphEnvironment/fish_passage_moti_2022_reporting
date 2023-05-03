@@ -1,6 +1,5 @@
 source('R/packages.R')
 source('R/functions.R')
-source('R/private_info.R')
 source('R/tables.R')
 
 # retrieve the watersheds and elevations of the pscis sites then burn to the sqlite
@@ -8,7 +7,7 @@ source('R/tables.R')
 ##we needed to remove crossings that are first order - this used to run but doesn't want to anymore
 ##i wonder if it is because the 1st order watershed is the first one on the list so the api kicks us off...
 bcfishpass_phase2 <- bcfishpass %>%
-  filter(stream_crossing_id %in% c(197534, 197559, 197844))
+  filter(stream_crossing_id %in% c(198283,196200)| modelled_crossing_id == 17501664)
 
 
 bcfishpass_phase2_clean <- bcfishpass_phase2 %>%
@@ -96,11 +95,14 @@ wshds_fwapgr <- fpr::fpr_sp_watershed(bcfishpass_phase2_clean)
 #   wshds_1ord
 # )
 
-wshds <- wshds_fwapgr
+wshds <- wshds_fwapgr %>%
+  # because we are missing a stream_crossing_id we will put a dummy value
+  mutate(stream_crossing_id = case_when(localcode_ltree == '100.382626.976386.066809.061403' ~ '999',
+                                        T ~ stream_crossing_id))
 
 # turn into a spatial object
 bcfishpass_phase2_sf <- bcfishpass_phase2 %>%
-  sf::st_as_sf(coords = c('utm_easting', 'utm_northing'), crs = 26911, remove = F)
+  sf::st_as_sf(coords = c('utm_easting', 'utm_northing'), crs = 26910, remove = F)
 
 # hack to keep objects named the same
 pscis_all_sf <- poisspatial::ps_elevation_google(bcfishpass_phase2_sf,
@@ -109,11 +111,16 @@ pscis_all_sf <- poisspatial::ps_elevation_google(bcfishpass_phase2_sf,
   mutate(elev = round(elev, 0))
 
 ## add in the elvation of the site
-wshds <- left_join(wshds %>% mutate(stream_crossing_id = as.numeric(stream_crossing_id)),
-                   pscis_all_sf %>% distinct(stream_crossing_id, .keep_all = T) %>%
-                     st_drop_geometry() %>%
-                     select(stream_crossing_id, elev_site = elev),
-                   by = c('stream_crossing_id'))
+wshds <- left_join(
+  wshds %>%
+    mutate(stream_crossing_id = as.numeric(stream_crossing_id)),
+
+  pscis_all_sf %>% distinct(stream_crossing_id, .keep_all = T) %>%
+    st_drop_geometry() %>%
+    select(stream_crossing_id, elev_site = elev),
+
+  by = c('stream_crossing_id')
+)
 
 
 

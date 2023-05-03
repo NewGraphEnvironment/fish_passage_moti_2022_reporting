@@ -499,7 +499,7 @@ str_type %>%
 # spreadsheet to build for input includes site lengths, surveyors initials, time, priority for remediation, updated fish species (if changed from my_fish_sp())
 # thing is that we don't really have the fish info
 
-hab_con <- fpr_import_hab_con()
+hab_con <- fpr_import_hab_con(row_empty_remove = T)
 hab_priority_prep1 <- hab_con %>%
   purrr::pluck("step_1_ref_and_loc_info") %>%
   dplyr::filter(!is.na(site_number))%>%
@@ -533,15 +533,15 @@ hab_priority_prep <- left_join(
 
 
 # burn to csv to use as your template.  For safety use a different name then rename manually
-# hab_priority_prep %>%
-#   readr::write_csv('data/habitat_confirmations_priorities_raw.csv', na = '')
+hab_priority_prep %>%
+  readr::write_csv('data/habitat_confirmations_priorities_raw.csv', na = '')
 
 # separate local site names into site, location, and ef
 
-habitat_confirmations_priorities <- readr::read_csv(
-  file = "./data/habitat_confirmations_priorities.csv") %>%
-  separate(alias_local_name, c("site", "location", "ef"), sep = "_", remove = FALSE) %>%
-  readr::write_csv(file = "./data/habitat_confirmations_priorities.csv", na = "")
+# habitat_confirmations_priorities <- readr::read_csv(
+#   file = "./data/habitat_confirmations_priorities.csv") %>%
+#   separate(alias_local_name, c("site", "location", "ef"), sep = "_", remove = FALSE) %>%
+#   readr::write_csv(file = "./data/habitat_confirmations_priorities.csv", na = "")
 
 
 # extract rd cost multiplier ----------------------------------------------

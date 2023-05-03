@@ -1,0 +1,6 @@
+reference_number,gazetted_name,alias_local_name,waterbody_type,waterbody_id_identifier,watershed_code_45_digit,twc_number,reach_number,site_number,survey_date,utm_method,utm_zone,utm_easting,utm_northing,no_visible_channel,dewatered_dry_int_channel
+1,Bittner Creek,196200_ds,stream,00000TABR,,,,1,44800,GPS general,10,521561,5976183,visible channel,
+2,Bittner Creek,196200_us,stream,00000TABR,,,,2,44800,GPS general,10,521570,5976115,visible channel,
+3,Cross Creek,198283_ds,stream,00000BABL,,,,3,44801,GPS general,10,324901,6044081,visible channel,
+4,Cross Creek,198283_x,stream,00000BABL,,,,4,44801,GPS general,10,324806,6044069,visible channel,
+5,Five Mile Creek,198400_us,stream,00000SAJR,,,,5,44820,geographic information system (GIS),10,570699,5774416,visible channel,

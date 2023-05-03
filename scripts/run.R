@@ -48,7 +48,7 @@ rmarkdown::render_site(output_format = 'bookdown::gitbook',
 #################################################################################################
 ##move the phase 1 appendix out of the main directory to a backup file or else the file is too big
 # make sure the pdf is not open in your viewer!!!
-filename_html <- 'Elk2022'
+filename_html <- 'Moti2022'
 
 
 {

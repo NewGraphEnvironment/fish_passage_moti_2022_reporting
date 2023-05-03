@@ -103,6 +103,15 @@ mapply(fpr::fpr_photo_resize_convert,
        path = directory_names,
        size = "1296 x 972!")
 
+# -------------test 5 mile photos
+df_test <- sf::st_read('../../gis/mergin/bcfishpass_skeena_20220823/form_pscis_202209061414.gpkg') %>%
+  mutate(my_crossing_reference = case_when(str_detect(stream_name, "Mile") ~ 17501664,
+                                           T ~ my_crossing_reference)) %>%
+  mutate(site_id = case_when(is.na(pscis_crossing_id) ~ my_crossing_reference, T ~ pscis_crossing_id)) %>%
+  filter(
+    str_detect(stream_name, "Mile")
+  )
 
-
+# put a draft function in scripts/functions.R
+dff_photo_rename()
 

@@ -13,7 +13,7 @@ source('scripts/packages.R')
 dir_project <- 'bcfishpass_skeena_20220823'
 
 # name the type of form to inform file search
-form_type <- 'monitor'
+form_type <- 'pscis'
 
 # find all the pscis forms in the file
 form_names <- list.files(path = paste0('../../gis/mergin/',
@@ -314,4 +314,5 @@ form %>%
     'data/dff/pscis_form_5mile_',
     format(lubridate::now(), "%Y%m%d"),
     '.csv'), na = '')
+
 

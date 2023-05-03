@@ -1,46 +1,82 @@
 # Methods
 
-## Fish Sampling
-Electrofishing was utilized for fish sampling according to stream inventory standards and procedures found in the Reconnaissance (1:20 000) Fish and Fish Habitat Inventory Manual [@resourcesinventorycommittee2001Reconnaissance20]. Individual captured fish were GPS'd, measured for fork length and released.  A [Fish Data Submission Spreadsheet Template - V 2.0, January 20, 2020 ](https://www2.gov.bc.ca/gov/content/environment/plants-animals-ecosystems/fish/fish-and-fish-habitat-data-information/fish-data-submission/submit-fish-data#submitfish) was populated for all sites and will be submitted to the provincial government under scientific fish collection permit CB22-755885. Habitat characteristics measured included water temperature, pH, conductivity, channel/wetted widths, pool depths, gradient,  bankfull channel depth, stage, cover, large woody debris presence/abundance, channel bank characteristics, riparian vegetation type/structural stage, substrate and channel morphology. Downstream and upstream photographs were taken at each site and relevant features were recorded.  
+## Fish Passage Assessments
+
+In the field, crossings prioritized for follow-up were first assessed for fish passage following the procedures outlined in “Field Assessment for Determining Fish Passage Status of Closed Bottomed Structures” [@fish_passage_assessments]. Crossings surveyed included closed bottom structures (CBS), open bottom structures (OBS) and crossings considered “other” (i.e. fords).  Photos were taken at surveyed crossings and when possible included images of the road, crossing inlet, crossing outlet, crossing barrel, channel downstream and channel upstream of the crossing and any other relevant features.  The following information was recorded for all surveyed crossings: date of inspection, crossing reference, crew member initials, Universal Transverse Mercator (UTM) coordinates, stream name, road name and kilometer, road tenure information, crossing type, crossing subtype, culvert diameter or span for OBS, culvert length or width for OBS.  A more detailed “full assessment” was completed for all closed bottom structures and included the following parameters: presence/absence of continuous culvert embedment (yes/no), average depth of embedment, whether or not the culvert bed resembled the native stream bed, presence of and percentage backwatering, fill depth, outlet drop, outlet pool depth, inlet drop, culvert slope, average downstream channel width, stream slope, presence/absence of beaver activity, presence/absence of fish at time of survey, type of valley fill, and a habitat value rating.  Habitat value ratings were based on channel morphology, flow characteristics (perennial, intermittent, ephemeral), fish migration patterns, the presence/absence of deep pools, un-embedded boulders, substrate, woody debris, undercut banks, aquatic vegetation and overhanging riparian vegetation (Table \@ref(tab:tab-hab-value)).  For crossings determined to be potential barriers or barriers based on the data (see [Barrier Scoring]), a culvert fix and recommended diameter/span was proposed.  
 
 <br>
 
-Habitat data associated with electrofishing sites was collated on ["Site Cards"](https://www2.gov.bc.ca/gov/content/environment/natural-resource-stewardship/laws-policies-standards-guidance/inventory-standards/aquatic-ecosystems) with habitat characteristics recorded included channel widths, wetted widths, residual pool depths, gradients, bankfull depths, stage, temperature, conductivity, pH, cover by type, substrate and channel morphology (among others). Any  potential  obstacles  to  fish  passage  were  inventoried  with  photos, physical  descriptions  and  locations  recorded on site cards.  Surveyed routes were recorded with time-signatures on handheld GPS units.   
 
-<br>
-
-
-## Fish Habitat Assessment 
-The Fish Habitat Assessment Procedures were developed by @johnston_slaney1996FishHabitat to provide a standard framework for identifying needs and opportunities for fish habitat restoration.  Field assessments in 2022 included Level 1 assessments - which are standardized protocols for characterizing average fish habitat conditions within stream reaches with the intent to identify scenarios that may limit fish production.  Sample sites were divided into distinct geomorphic habitat units based on gradient, water flow characteristics, depth and size/position of the habitat unit relative to the main channel (habitat unit category). Habitat unit categories consisted of primary (occupy more than 50% of the wetted width of the main channel), secondary (side channels) and tertiary units (less than . These habitat units consisted of pools, glides, riffles and cascades which are described in more detail below:
-
- + Pools - areas of slower, deeper water created by impoundment of water or scour (often associated with large woody debris) with a concave bottom profile and a water surface gradient near 0%. Minimum dimensions for the size of pools (miniumum area and associated minimum residual depth) are defined in @johnston_slaney1996FishHabitat and based on the bankfull channel width of the stream.
  
- + Glides were defined as areas of flat bottomed, fast-flowing and non-turbulent (laminar) flow.
+```{r tab-hab-value}
+fpr::fpr_table_habvalue %>% 
+  knitr::kable(caption = 'Habitat value criteria (Fish Passage Technical Working Group, 2011).', booktabs = T) %>% 
+    kableExtra::column_spec(column = 1, width_min = '1.5in') %>% 
+    kableExtra::kable_styling(c("condensed"), full_width = T, font_size = font_set) 
+  
+```
  
- + Riffles included areas of turbulent, fast flowing water usually consisting of shallow moderate-gradient areas with gravel or cobble bed material projecting above the water surface and obvious surface turbulence. 
- 
- + Cascades included steeper, stepped "riffles" of bedrock or emergent substrates in channels with gradient greater than ~4%.  The water surface is usually very turbulent and frothy and white in appearance.
- 
-Sites were surveyed using a hip chain to track distance with the following attributes recorded for each habitat unit - gradient, mean water depth, mean wetted width, mean bankfull channel width, mean bankfull depth, pool characteristics (max depth, crest depth, residual depth), pool type (scour pool or impoundment), dominant/subdominant bed material type, large woody debris (total of all pieces >10cm in diameter as well as total number of "functional" pieces broken out into multiple size categories), cover (% by type), disturbance indicators, riparian vegetation type, riparian structural stage, overstream canopy closure and spawning gravel amount/type.
+`r if(gitbook_on){knitr::asis_output("<br>")} else knitr::asis_output("\\pagebreak")`
+
+### Barrier Scoring
+
+Fish passage potential was determined for each stream crossing identified as a closed bottom structure as per @fish_passage_assessments.  The combined scores from five criteria: depth and degree to which the structure is embedded, outlet drop, stream width ratio, culvert slope, and culvert length were used to screen whether each culvert was a likely barrier to some fish species and life stages (Table \@ref(tab:tab-barrier-scoring), Table \@ref(tab:tab-barrier-result). These criteria were developed based on data obtained from various studies and reflect an estimation for the passage of a juvenile salmon or small resident rainbow trout [@clarkinNationalInventoryAssessment2005 ;@bellFisheriesHandbookEngineering1991; @thompsonAssessingFishPassage2013].  
 
 <br>
 
-A clinometer was used to estimate gradient, channel measurements were taken using a tape measure and water depths measured using a measuring stick.  Photographs were taken of representative habitats throughout the surveyed reaches.  All field measurements were recorded on Level 1 Habitat Survey Data Form templates (@johnston_slaney1996FishHabitat). GPS waypoints were collected at the beginning and end of all Primary habitat units to allow georeferenceing of field data.
+```{r tab-barrier-scoring, eval=T}
+tab <- as_tibble(t(fpr_table_barrier_scoring)) %>% 
+  mutate(V4 = names(fpr_table_barrier_scoring)) %>% 
+  select(V4, everything()) %>% 
+  janitor::row_to_names(1) %>%  ##turn the table sideways
+  mutate(Risk = case_when(Risk == 'Value' ~ '  Value',
+                          T ~ Risk))
 
-## Stream Discharge
-Estimates of stream discharge were collected on October 18, 2022 coinciding with fish habitat assessments in Weigert Creek. Data was collected in accordance with the Manual of British Columbia Hydrometric Standards [@resourcesinformationstandardscommittee2018ManualBritish].  Measurements were taken at points upstream and dowstream of Highway 43 at both Weigert Creek and Brule Creek using a HACH FH950 flow meter and area-velocity method. The stream was divided into 19-20 evenly distributed sections, free from vegetation, immovable rocks and obstructions with stream depth and velocity within each section were collected using a HACH FH950 flow meter. 
+tab %>% 
+  fpr::fpr_kable(caption_text = 'Fish Barrier Risk Assessment (MoE 2011).', scroll = F)
+
+```
 
 <br>
 
 
-## Water Temperature
-A HOBO Water Temp Pro v2 logger was installed approximately 20m upstream of Highway 43 on Weigert Creek and on Brule Creek immediately below the falls at approximately 3.6km upstream of the Highway 43 culverts. Loggers were installed within a white PVC tube housing to prevent thermal transfer, with perforations on the protective housing to allow water to flow through the tubing. The loggers were anchored to the shoreline with steel cable at a water depth of 60% total depth on June 24, 2023 and pulled on November 17, 2023. Temperature was taken at 30-minute intervals for the entire length of time installed. Unfortunately, high flows with Brule Creek resulted in the dislodging of the logger installed under the falls and the subsequent loss of the logger and all associated data.
+```{r tab-barrier-result}
+fpr::fpr_table_barrier_result %>% 
+  fpr::fpr_kable(caption_text = 'Fish Barrier Scoring Results (MoE 2011).', scroll = F) 
+
+```
 
 <br>
 
+## Habitat Assessments
 
-We defined the start of the growing season as per @coleman_fausch2007ColdSummer which delineate it as the beginning of the first week that average stream temperatures exceed and remain above 5$^\circ$C in the spring and the end of the growing season as the last day of the first week that average stream temperature drops below 4$^\circ$C. We specified Monday as the first day of the week and identified the week of the year based on the number of 7 day periods from January 1 plus 1.  Celsius degree-days were calculated as the mean daily temperature (ex. 2 days with average temperatures of 7$^\circ$C with sum to 14 Celsius degree-days).
+Habitat was assessed rapidly with characteristics documented included channel morphology, flow characteristics (perennial, intermittent, ephemeral), the presence/absence of deep pools, un-embeddedboulders, substrate, woody debris, undercut banks, aquatic vegetation and overhanging riparian vegetation. A key goal of the assessments was to gather stream width information upstream and downstream of the stream crossing structures to provide information regarding stream channel constriction through road/stream crossing structures as this can hinder upstream fish migration.  To standardize data collected and facilitate submission of the data to provincial databases, information was collected on ["Site Cards"](https://www2.gov.bc.ca/gov/content/environment/natural-resource-stewardship/laws-policies-standards-guidance/inventory-standards/aquatic-ecosystems). Additional habitat characteristics recorded included channel widths, wetted widths, residual pool depths, gradients, bankfull depths, stage, temperature, conductivity, pH, cover by type, substrate and channel morphology (among others). When possible, the crew surveyed downstream of the crossing to the point where fish presence had been previously confirmed and upstream to a minimum distance of 600m. Any  potential  obstacles  to  fish  passage  were  inventoried  with  photos, physical  descriptions and locations recorded on site cards.  Surveyed routes were recorded with time-signatures on handheld GPS units.   
+
+<br>
+
+## Monitoring Metrics
+
+## Reporting
+
+Reporting was generated with `bookdown` [@bookdown2016] from `Rmarkdown` [@R-rmarkdown] with primarily `R` [@rcoreteam2022languageenvironment] and `SQL` scripts. The `R` package `fpr` contains many specialized custom functions related to the work [@irvine2023NewGraphEnvironmentfpr].  In addition to numerous spatial layers sourced through the BC Data Catalogue then stored and queried in a local `postgresql` and `sqlite` databases [data inputs](https://github.com/NewGraphEnvironment/fish_passage_moti_2022_reporting/tree/main/data) for this project include: 
+
+ + Populated [Fish Data Submission Spreadsheet Template - V 2.0, January 20, 2020 ](https://www2.gov.bc.ca/gov/content/environment/plants-animals-ecosystems/fish/fish-and-fish-habitat-data-information/fish-data-submission/submit-fish-data#submitfish) 
+
+ + Populated [pscis_assessment_template_v24.xls](https://www2.gov.bc.ca/gov/content/environment/plants-animals-ecosystems/fish/aquatic-habitat-management/fish-passage/fish-passage-technical/assessment-projects)
+ 
+ 
+ + [`bcfishpass`](https://github.com/smnorris/bcfishpass) outputs.
 
 
+ + [Custom CSV file](https://github.com/NewGraphEnvironment/fish_passage_moti_2022_reporting/blob/main/data/habitat_confirmations_priorities.csv) detailing Phase 2 site:
+     - length of survey upstream and downstream
+     - a conservative estimate of the linear length of mainstem habitat potentially available upstream of the crossing 
+     - fish species confirmed as present upstream of the crossing
 
+ + [GPS tracks](https://github.com/NewGraphEnvironment/fish_passage_moti_2022_reporting/blob/main/data/habitat_confirmation_tracks.gpx) from field surveys.  
 
+ + [Photos](https://github.com/NewGraphEnvironment/fish_passage_moti_2022_reporting/tree/main/data/photos) and photo metadata
+
+<br>
+
+Version changes are tracked [here](https://github.com/NewGraphEnvironment/fish_passage_moti_2022_reporting/blob/main/NEWS.md) and issues/planned enhancements tracked [here](https://github.com/NewGraphEnvironment/fish_passage_moti_2022_reporting/issues). 
