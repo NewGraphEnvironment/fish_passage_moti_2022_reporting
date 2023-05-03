@@ -5,6 +5,7 @@ tab:tab-barrier-result
 tab:tab-mon-metrics
 tab:tab-monitor-loc
 tab:tab-monitor-sum
+fig:map-bittner
 fig:lidar-bittner
 tab:tab-wshd-196200
 fig:photo-bittner-cv
@@ -26,6 +27,7 @@ fig:photo-198283-01
 fig:photo-198283-02
 fig:photo-198283-03
 fig:photo-198283-04
+fig:map-5mile
 fig:lidar-5mile
 tab:tab-wshd-198400
 tab:tab-culvert-198400
@@ -40,12 +42,16 @@ barrier-scoring
 habitat-assessments
 monitoring-metrics
 reporting
-results
+results-and-discussion
 bittner-creek---196200
 crossing-characteristics
 stream-characteristics
+discussion
 cross-creek---198283
 crossing-characteristics-1
+discussion-1
 five-mile-creek---198400
 crossing-characteristics-2
 stream-characteristics-2
+discussion-2
+conclusion
