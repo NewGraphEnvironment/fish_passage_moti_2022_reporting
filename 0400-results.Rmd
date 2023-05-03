@@ -180,7 +180,9 @@ my_caption1 = paste0('Habitat downstream of PSCIS crossing ', my_site, ', on Bit
 ```
 
 ```{r photo-196200-01, fig.cap= my_caption1, out.width = photo_width, eval=gitbook_on}
-grid::grid.raster(jpeg::readJPEG(my_photo1))
+knitr::include_graphics(my_photo1)
+# grid::grid.raster(jpeg::readJPEG(my_photo1))
+
 ```
 
 <br>
@@ -188,7 +190,7 @@ grid::grid.raster(jpeg::readJPEG(my_photo1))
 ```{r photo-196200-02-prep}
 my_photo2 = fpr::fpr_photo_pull_by_str(site = my_site, str_to_pull = '_d2_')
 
-my_caption2 = paste0('Habitat downstrewam of PSCIS crossing ', my_site, ', on Bittner Creek')
+my_caption2 = paste0('Habitat downstream of PSCIS crossing ', my_site, ', on Bittner Creek')
 
 ```
 

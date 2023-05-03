@@ -1143,34 +1143,35 @@ medium
 <div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="results-and-discussion.html#cb20-1" tabindex="-1"></a>my_photo1 <span class="ot">=</span> fpr<span class="sc">::</span><span class="fu">fpr_photo_pull_by_str</span>(<span class="at">site =</span> my_site, <span class="at">str_to_pull =</span> <span class="st">&#39;_d1_&#39;</span>)</span>
 <span id="cb20-2"><a href="results-and-discussion.html#cb20-2" tabindex="-1"></a></span>
 <span id="cb20-3"><a href="results-and-discussion.html#cb20-3" tabindex="-1"></a>my_caption1 <span class="ot">=</span> <span class="fu">paste0</span>(<span class="st">&#39;Habitat downstream of PSCIS crossing &#39;</span>, my_site, <span class="st">&#39;, on Bittner Creek.&#39;</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="results-and-discussion.html#cb21-1" tabindex="-1"></a>grid<span class="sc">::</span><span class="fu">grid.raster</span>(jpeg<span class="sc">::</span><span class="fu">readJPEG</span>(my_photo1))</span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="results-and-discussion.html#cb21-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(my_photo1)</span></code></pre></div>
 <div class="figure"><span style="display:block;" id="fig:photo-196200-01"></span>
-<img src="Moti2022_files/figure-html/photo-196200-01-1.png" alt="Habitat downstream of PSCIS crossing 196200, on Bittner Creek." width="100%" />
+<img src="data/photos/196200/IMG_8876_d1_k_.JPG" alt="Habitat downstream of PSCIS crossing 196200, on Bittner Creek." width="100%" />
 <p class="caption">
 Figure 4.4: Habitat downstream of PSCIS crossing 196200, on Bittner Creek.
 </p>
 </div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="results-and-discussion.html#cb22-1" tabindex="-1"></a><span class="co"># grid::grid.raster(jpeg::readJPEG(my_photo1))</span></span></code></pre></div>
 <p><br></p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="results-and-discussion.html#cb22-1" tabindex="-1"></a>my_photo2 <span class="ot">=</span> fpr<span class="sc">::</span><span class="fu">fpr_photo_pull_by_str</span>(<span class="at">site =</span> my_site, <span class="at">str_to_pull =</span> <span class="st">&#39;_d2_&#39;</span>)</span>
-<span id="cb22-2"><a href="results-and-discussion.html#cb22-2" tabindex="-1"></a></span>
-<span id="cb22-3"><a href="results-and-discussion.html#cb22-3" tabindex="-1"></a>my_caption2 <span class="ot">=</span> <span class="fu">paste0</span>(<span class="st">&#39;Habitat downstrewam of PSCIS crossing &#39;</span>, my_site, <span class="st">&#39;, on Bittner Creek&#39;</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="results-and-discussion.html#cb23-1" tabindex="-1"></a>grid<span class="sc">::</span><span class="fu">grid.raster</span>(jpeg<span class="sc">::</span><span class="fu">readJPEG</span>(my_photo2))</span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="results-and-discussion.html#cb23-1" tabindex="-1"></a>my_photo2 <span class="ot">=</span> fpr<span class="sc">::</span><span class="fu">fpr_photo_pull_by_str</span>(<span class="at">site =</span> my_site, <span class="at">str_to_pull =</span> <span class="st">&#39;_d2_&#39;</span>)</span>
+<span id="cb23-2"><a href="results-and-discussion.html#cb23-2" tabindex="-1"></a></span>
+<span id="cb23-3"><a href="results-and-discussion.html#cb23-3" tabindex="-1"></a>my_caption2 <span class="ot">=</span> <span class="fu">paste0</span>(<span class="st">&#39;Habitat downstream of PSCIS crossing &#39;</span>, my_site, <span class="st">&#39;, on Bittner Creek&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="results-and-discussion.html#cb24-1" tabindex="-1"></a>grid<span class="sc">::</span><span class="fu">grid.raster</span>(jpeg<span class="sc">::</span><span class="fu">readJPEG</span>(my_photo2))</span></code></pre></div>
 <div class="figure"><span style="display:block;" id="fig:photo-196200-02"></span>
-<img src="Moti2022_files/figure-html/photo-196200-02-1.png" alt="Habitat downstrewam of PSCIS crossing 196200, on Bittner Creek" width="100%" />
+<img src="Moti2022_files/figure-html/photo-196200-02-1.png" alt="Habitat downstream of PSCIS crossing 196200, on Bittner Creek" width="100%" />
 <p class="caption">
-Figure 4.5: Habitat downstrewam of PSCIS crossing 196200, on Bittner Creek
+Figure 4.5: Habitat downstream of PSCIS crossing 196200, on Bittner Creek
 </p>
 </div>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="results-and-discussion.html#cb24-1" tabindex="-1"></a>my_caption <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&#39;Left: &#39;</span>, my_caption1, <span class="st">&#39; Right: &#39;</span>, my_caption2)</span>
-<span id="cb24-2"><a href="results-and-discussion.html#cb24-2" tabindex="-1"></a></span>
-<span id="cb24-3"><a href="results-and-discussion.html#cb24-3" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(my_photo1)</span>
-<span id="cb24-4"><a href="results-and-discussion.html#cb24-4" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;fig/pixel.png&quot;</span>)</span>
-<span id="cb24-5"><a href="results-and-discussion.html#cb24-5" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(my_photo2)</span></code></pre></div>
-<p><br></p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="results-and-discussion.html#cb25-1" tabindex="-1"></a>my_photo1 <span class="ot">=</span> fpr<span class="sc">::</span><span class="fu">fpr_photo_pull_by_str</span>(<span class="at">site =</span> my_site, <span class="at">str_to_pull =</span> <span class="st">&#39;_pool_&#39;</span>)</span>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="results-and-discussion.html#cb25-1" tabindex="-1"></a>my_caption <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&#39;Left: &#39;</span>, my_caption1, <span class="st">&#39; Right: &#39;</span>, my_caption2)</span>
 <span id="cb25-2"><a href="results-and-discussion.html#cb25-2" tabindex="-1"></a></span>
-<span id="cb25-3"><a href="results-and-discussion.html#cb25-3" tabindex="-1"></a>my_caption1 <span class="ot">=</span> <span class="fu">paste0</span>(<span class="st">&#39;Downstream view of location of historic outlet pool on Bittner Creek below Foreman Road which has filled with gravels due to culvert removal.&#39;</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="results-and-discussion.html#cb26-1" tabindex="-1"></a>grid<span class="sc">::</span><span class="fu">grid.raster</span>(jpeg<span class="sc">::</span><span class="fu">readJPEG</span>(my_photo1))</span></code></pre></div>
+<span id="cb25-3"><a href="results-and-discussion.html#cb25-3" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(my_photo1)</span>
+<span id="cb25-4"><a href="results-and-discussion.html#cb25-4" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;fig/pixel.png&quot;</span>)</span>
+<span id="cb25-5"><a href="results-and-discussion.html#cb25-5" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(my_photo2)</span></code></pre></div>
+<p><br></p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="results-and-discussion.html#cb26-1" tabindex="-1"></a>my_photo1 <span class="ot">=</span> fpr<span class="sc">::</span><span class="fu">fpr_photo_pull_by_str</span>(<span class="at">site =</span> my_site, <span class="at">str_to_pull =</span> <span class="st">&#39;_pool_&#39;</span>)</span>
+<span id="cb26-2"><a href="results-and-discussion.html#cb26-2" tabindex="-1"></a></span>
+<span id="cb26-3"><a href="results-and-discussion.html#cb26-3" tabindex="-1"></a>my_caption1 <span class="ot">=</span> <span class="fu">paste0</span>(<span class="st">&#39;Downstream view of location of historic outlet pool on Bittner Creek below Foreman Road which has filled with gravels due to culvert removal.&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="results-and-discussion.html#cb27-1" tabindex="-1"></a>grid<span class="sc">::</span><span class="fu">grid.raster</span>(jpeg<span class="sc">::</span><span class="fu">readJPEG</span>(my_photo1))</span></code></pre></div>
 <div class="figure"><span style="display:block;" id="fig:photo-196200-03"></span>
 <img src="Moti2022_files/figure-html/photo-196200-03-1.png" alt="Downstream view of location of historic outlet pool on Bittner Creek below Foreman Road which has filled with gravels due to culvert removal." width="100%" />
 <p class="caption">
@@ -1178,26 +1179,26 @@ Figure 4.6: Downstream view of location of historic outlet pool on Bittner Creek
 </p>
 </div>
 <p><br></p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="results-and-discussion.html#cb27-1" tabindex="-1"></a>my_photo2 <span class="ot">=</span> fpr<span class="sc">::</span><span class="fu">fpr_photo_pull_by_str</span>(<span class="at">site =</span> my_site, <span class="at">str_to_pull =</span> <span class="st">&#39;_fish1_&#39;</span>)</span>
-<span id="cb27-2"><a href="results-and-discussion.html#cb27-2" tabindex="-1"></a></span>
-<span id="cb27-3"><a href="results-and-discussion.html#cb27-3" tabindex="-1"></a>my_caption2 <span class="ot">=</span> <span class="fu">paste0</span>(<span class="st">&#39;Salmonid parr observed upstream of bridge on Bittner Creek.&#39;</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="results-and-discussion.html#cb28-1" tabindex="-1"></a>grid<span class="sc">::</span><span class="fu">grid.raster</span>(jpeg<span class="sc">::</span><span class="fu">readJPEG</span>(my_photo2))</span></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="results-and-discussion.html#cb28-1" tabindex="-1"></a>my_photo2 <span class="ot">=</span> fpr<span class="sc">::</span><span class="fu">fpr_photo_pull_by_str</span>(<span class="at">site =</span> my_site, <span class="at">str_to_pull =</span> <span class="st">&#39;_fish1_&#39;</span>)</span>
+<span id="cb28-2"><a href="results-and-discussion.html#cb28-2" tabindex="-1"></a></span>
+<span id="cb28-3"><a href="results-and-discussion.html#cb28-3" tabindex="-1"></a>my_caption2 <span class="ot">=</span> <span class="fu">paste0</span>(<span class="st">&#39;Salmonid parr observed upstream of bridge on Bittner Creek.&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="results-and-discussion.html#cb29-1" tabindex="-1"></a>grid<span class="sc">::</span><span class="fu">grid.raster</span>(jpeg<span class="sc">::</span><span class="fu">readJPEG</span>(my_photo2))</span></code></pre></div>
 <div class="figure"><span style="display:block;" id="fig:photo-196200-04"></span>
 <img src="Moti2022_files/figure-html/photo-196200-04-1.png" alt="Salmonid parr observed upstream of bridge on Bittner Creek." width="100%" />
 <p class="caption">
 Figure 4.7: Salmonid parr observed upstream of bridge on Bittner Creek.
 </p>
 </div>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="results-and-discussion.html#cb29-1" tabindex="-1"></a>my_caption <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&#39;Left: &#39;</span>, my_caption1, <span class="st">&#39; Right: &#39;</span>, my_caption2)</span>
-<span id="cb29-2"><a href="results-and-discussion.html#cb29-2" tabindex="-1"></a></span>
-<span id="cb29-3"><a href="results-and-discussion.html#cb29-3" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(my_photo1)</span>
-<span id="cb29-4"><a href="results-and-discussion.html#cb29-4" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;fig/pixel.png&quot;</span>)</span>
-<span id="cb29-5"><a href="results-and-discussion.html#cb29-5" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(my_photo2)</span></code></pre></div>
-<p><br></p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="results-and-discussion.html#cb30-1" tabindex="-1"></a>my_photo1 <span class="ot">=</span> fpr<span class="sc">::</span><span class="fu">fpr_photo_pull_by_str</span>(<span class="at">site =</span> my_site, <span class="at">str_to_pull =</span> <span class="st">&#39;_u1_&#39;</span>)</span>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="results-and-discussion.html#cb30-1" tabindex="-1"></a>my_caption <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&#39;Left: &#39;</span>, my_caption1, <span class="st">&#39; Right: &#39;</span>, my_caption2)</span>
 <span id="cb30-2"><a href="results-and-discussion.html#cb30-2" tabindex="-1"></a></span>
-<span id="cb30-3"><a href="results-and-discussion.html#cb30-3" tabindex="-1"></a>my_caption1 <span class="ot">=</span> <span class="fu">paste0</span>(<span class="st">&#39;Typical habitat upstream of Foreman Road bridge on Bittner Creek.&#39;</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="results-and-discussion.html#cb31-1" tabindex="-1"></a>grid<span class="sc">::</span><span class="fu">grid.raster</span>(jpeg<span class="sc">::</span><span class="fu">readJPEG</span>(my_photo1))</span></code></pre></div>
+<span id="cb30-3"><a href="results-and-discussion.html#cb30-3" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(my_photo1)</span>
+<span id="cb30-4"><a href="results-and-discussion.html#cb30-4" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;fig/pixel.png&quot;</span>)</span>
+<span id="cb30-5"><a href="results-and-discussion.html#cb30-5" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(my_photo2)</span></code></pre></div>
+<p><br></p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="results-and-discussion.html#cb31-1" tabindex="-1"></a>my_photo1 <span class="ot">=</span> fpr<span class="sc">::</span><span class="fu">fpr_photo_pull_by_str</span>(<span class="at">site =</span> my_site, <span class="at">str_to_pull =</span> <span class="st">&#39;_u1_&#39;</span>)</span>
+<span id="cb31-2"><a href="results-and-discussion.html#cb31-2" tabindex="-1"></a></span>
+<span id="cb31-3"><a href="results-and-discussion.html#cb31-3" tabindex="-1"></a>my_caption1 <span class="ot">=</span> <span class="fu">paste0</span>(<span class="st">&#39;Typical habitat upstream of Foreman Road bridge on Bittner Creek.&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="results-and-discussion.html#cb32-1" tabindex="-1"></a>grid<span class="sc">::</span><span class="fu">grid.raster</span>(jpeg<span class="sc">::</span><span class="fu">readJPEG</span>(my_photo1))</span></code></pre></div>
 <div class="figure"><span style="display:block;" id="fig:photo-196200-05"></span>
 <img src="Moti2022_files/figure-html/photo-196200-05-1.png" alt="Typical habitat upstream of Foreman Road bridge on Bittner Creek." width="100%" />
 <p class="caption">
@@ -1205,35 +1206,35 @@ Figure 4.8: Typical habitat upstream of Foreman Road bridge on Bittner Creek.
 </p>
 </div>
 <p><br></p>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="results-and-discussion.html#cb32-1" tabindex="-1"></a>my_photo2 <span class="ot">=</span> fpr<span class="sc">::</span><span class="fu">fpr_photo_pull_by_str</span>(<span class="at">site =</span> my_site, <span class="at">str_to_pull =</span> <span class="st">&#39;_u2_&#39;</span>)</span>
-<span id="cb32-2"><a href="results-and-discussion.html#cb32-2" tabindex="-1"></a></span>
-<span id="cb32-3"><a href="results-and-discussion.html#cb32-3" tabindex="-1"></a>my_caption2 <span class="ot">=</span> <span class="fu">paste0</span>(<span class="st">&#39;Typical habitat upstream of Foreman Road bridge on Bittner Creek.&#39;</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="results-and-discussion.html#cb33-1" tabindex="-1"></a>grid<span class="sc">::</span><span class="fu">grid.raster</span>(jpeg<span class="sc">::</span><span class="fu">readJPEG</span>(my_photo2))</span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="results-and-discussion.html#cb33-1" tabindex="-1"></a>my_photo2 <span class="ot">=</span> fpr<span class="sc">::</span><span class="fu">fpr_photo_pull_by_str</span>(<span class="at">site =</span> my_site, <span class="at">str_to_pull =</span> <span class="st">&#39;_u2_&#39;</span>)</span>
+<span id="cb33-2"><a href="results-and-discussion.html#cb33-2" tabindex="-1"></a></span>
+<span id="cb33-3"><a href="results-and-discussion.html#cb33-3" tabindex="-1"></a>my_caption2 <span class="ot">=</span> <span class="fu">paste0</span>(<span class="st">&#39;Typical habitat upstream of Foreman Road bridge on Bittner Creek.&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="results-and-discussion.html#cb34-1" tabindex="-1"></a>grid<span class="sc">::</span><span class="fu">grid.raster</span>(jpeg<span class="sc">::</span><span class="fu">readJPEG</span>(my_photo2))</span></code></pre></div>
 <div class="figure"><span style="display:block;" id="fig:photo-196200-06"></span>
 <img src="Moti2022_files/figure-html/photo-196200-06-1.png" alt="Typical habitat upstream of Foreman Road bridge on Bittner Creek." width="100%" />
 <p class="caption">
 Figure 4.9: Typical habitat upstream of Foreman Road bridge on Bittner Creek.
 </p>
 </div>
-<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="results-and-discussion.html#cb34-1" tabindex="-1"></a>my_caption <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&#39;Left: &#39;</span>, my_caption1, <span class="st">&#39; Right: &#39;</span>, my_caption2)</span>
-<span id="cb34-2"><a href="results-and-discussion.html#cb34-2" tabindex="-1"></a></span>
-<span id="cb34-3"><a href="results-and-discussion.html#cb34-3" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(my_photo1)</span>
-<span id="cb34-4"><a href="results-and-discussion.html#cb34-4" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;fig/pixel.png&quot;</span>)</span>
-<span id="cb34-5"><a href="results-and-discussion.html#cb34-5" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(my_photo2)</span></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="results-and-discussion.html#cb35-1" tabindex="-1"></a>my_caption <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&#39;Left: &#39;</span>, my_caption1, <span class="st">&#39; Right: &#39;</span>, my_caption2)</span>
+<span id="cb35-2"><a href="results-and-discussion.html#cb35-2" tabindex="-1"></a></span>
+<span id="cb35-3"><a href="results-and-discussion.html#cb35-3" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(my_photo1)</span>
+<span id="cb35-4"><a href="results-and-discussion.html#cb35-4" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;fig/pixel.png&quot;</span>)</span>
+<span id="cb35-5"><a href="results-and-discussion.html#cb35-5" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(my_photo2)</span></code></pre></div>
 </div>
 </div>
 <div id="cross-creek---198283" class="section level2 hasAnchor" number="4.2">
 <h2><span class="header-section-number">4.2</span> Cross Creek - 198283<a href="results-and-discussion.html#cross-creek---198283" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="results-and-discussion.html#cb35-1" tabindex="-1"></a>my_site <span class="ot">&lt;-</span> <span class="dv">198283</span></span></code></pre></div>
-<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="results-and-discussion.html#cb36-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;fig/elk_weigert_2022b.png&quot;</span>)</span>
-<span id="cb36-2"><a href="results-and-discussion.html#cb36-2" tabindex="-1"></a></span>
-<span id="cb36-3"><a href="results-and-discussion.html#cb36-3" tabindex="-1"></a><span class="co"># **Habitat Model Parameters** </span></span>
-<span id="cb36-4"><a href="results-and-discussion.html#cb36-4" tabindex="-1"></a><span class="co"># * Spawning max gradient: 5.0%# </span></span>
-<span id="cb36-5"><a href="results-and-discussion.html#cb36-5" tabindex="-1"></a><span class="co"># * Spawning discharge min (mean annual, m^3^/s): 0.05# </span></span>
-<span id="cb36-6"><a href="results-and-discussion.html#cb36-6" tabindex="-1"></a><span class="co"># * Spawning discharge max (mean annual, m^3^/s): 76.00# </span></span>
-<span id="cb36-7"><a href="results-and-discussion.html#cb36-7" tabindex="-1"></a><span class="co"># * Rearing max gradient:                         7.0%# </span></span>
-<span id="cb36-8"><a href="results-and-discussion.html#cb36-8" tabindex="-1"></a><span class="co"># * Rearing discharge min  (mean annual, m^3^/s): 0.02# </span></span>
-<span id="cb36-9"><a href="results-and-discussion.html#cb36-9" tabindex="-1"></a><span class="co"># * Rearing discharge max  (mean annual, m^3^/s): 30.00</span></span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="results-and-discussion.html#cb36-1" tabindex="-1"></a>my_site <span class="ot">&lt;-</span> <span class="dv">198283</span></span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="results-and-discussion.html#cb37-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;fig/elk_weigert_2022b.png&quot;</span>)</span>
+<span id="cb37-2"><a href="results-and-discussion.html#cb37-2" tabindex="-1"></a></span>
+<span id="cb37-3"><a href="results-and-discussion.html#cb37-3" tabindex="-1"></a><span class="co"># **Habitat Model Parameters** </span></span>
+<span id="cb37-4"><a href="results-and-discussion.html#cb37-4" tabindex="-1"></a><span class="co"># * Spawning max gradient: 5.0%# </span></span>
+<span id="cb37-5"><a href="results-and-discussion.html#cb37-5" tabindex="-1"></a><span class="co"># * Spawning discharge min (mean annual, m^3^/s): 0.05# </span></span>
+<span id="cb37-6"><a href="results-and-discussion.html#cb37-6" tabindex="-1"></a><span class="co"># * Spawning discharge max (mean annual, m^3^/s): 76.00# </span></span>
+<span id="cb37-7"><a href="results-and-discussion.html#cb37-7" tabindex="-1"></a><span class="co"># * Rearing max gradient:                         7.0%# </span></span>
+<span id="cb37-8"><a href="results-and-discussion.html#cb37-8" tabindex="-1"></a><span class="co"># * Rearing discharge min  (mean annual, m^3^/s): 0.02# </span></span>
+<span id="cb37-9"><a href="results-and-discussion.html#cb37-9" tabindex="-1"></a><span class="co"># * Rearing discharge max  (mean annual, m^3^/s): 30.00</span></span></code></pre></div>
 <p>PSCIS crossing 198283 on Cross Creek is located on Babine Lake Road, approximately 30km north-east (45 minute drive) of the town of Burns Lake (Figure <a href="background.html#fig:map-overview">2.1</a>). A map of the watershed (see modelled crossing id 500059) is provided in map attachment <a href="https://hillcrestgeo.ca/outgoing/fishpassage/projects/babl/archive/2022-09-06/FishPassage_093K.111.pdf">093K.111</a>. At the time of reporting, the mapping for the stream was slightly incorrect with the site located approximately 100m to the north of where shown in the BC freshwater atlas and within Babine Lake Marine Provincial Park - Pendleton Bay Site boundaries. The road is the responsibility of the Ministry of Transportation and Infrastructure.</p>
 <p><br></p>
 <p>PSCIS crossing 198283 was identified by the Lake Babine Nation, Dustin Snyder (Spruce City Wildlife Association) as a barrier to fish passage blocking sockeye attempting to spawn annually and brought to the attention of the Ministry of Transportation and Infrastructure. The Ministry of Transportation and Infrastructure worked together with Fisheries and Oceans Canada and Canadian Wildlife Federation to plan and implement replacement of the existing culverts with an open bottomed geotextile soil arched reinforced structure designed by Terratech Consulting Ltd in the summer of 2021. A short video documents the story <a href="https://www.youtube.com/watch?v=m--Q-WFt0As&amp;list=PLY-KTbpNXtBFU0Sey9vLs8ljL83ZvyXSk&amp;index=1">here</a>.</p>
@@ -1242,10 +1243,10 @@ Figure 4.9: Typical habitat upstream of Foreman Road bridge on Bittner Creek.
 <p><br></p>
 <p>At crossing 198283, Cross Creek is a fourth order stream with a watershed area upstream of the crossing of approximately 34.8km<sup>2</sup>. The elevation of the watershed ranges from a maximum of 1263m to 722m at the crossing (Table <a href="results-and-discussion.html#tab:tab-wshd-198283">4.6</a>).</p>
 <p><br></p>
-<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="results-and-discussion.html#cb37-1" tabindex="-1"></a>fpr<span class="sc">::</span><span class="fu">fpr_table_wshd_sum</span>(<span class="at">site_id =</span> my_site) <span class="sc">%&gt;%</span> </span>
-<span id="cb37-2"><a href="results-and-discussion.html#cb37-2" tabindex="-1"></a>  fpr<span class="sc">::</span><span class="fu">fpr_kable</span>(<span class="at">caption_text =</span> <span class="fu">paste0</span>(<span class="st">&#39;Summary of derived upstream watershed statistics for PSCIS crossing &#39;</span>, my_site, <span class="st">&#39;.&#39;</span>),</span>
-<span id="cb37-3"><a href="results-and-discussion.html#cb37-3" tabindex="-1"></a>           <span class="at">footnote_text =</span> <span class="st">&#39;Elev P60 = Elevation at which 60% of the watershed area is above&#39;</span>,</span>
-<span id="cb37-4"><a href="results-and-discussion.html#cb37-4" tabindex="-1"></a>           <span class="at">scroll =</span> F)</span></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="results-and-discussion.html#cb38-1" tabindex="-1"></a>fpr<span class="sc">::</span><span class="fu">fpr_table_wshd_sum</span>(<span class="at">site_id =</span> my_site) <span class="sc">%&gt;%</span> </span>
+<span id="cb38-2"><a href="results-and-discussion.html#cb38-2" tabindex="-1"></a>  fpr<span class="sc">::</span><span class="fu">fpr_kable</span>(<span class="at">caption_text =</span> <span class="fu">paste0</span>(<span class="st">&#39;Summary of derived upstream watershed statistics for PSCIS crossing &#39;</span>, my_site, <span class="st">&#39;.&#39;</span>),</span>
+<span id="cb38-3"><a href="results-and-discussion.html#cb38-3" tabindex="-1"></a>           <span class="at">footnote_text =</span> <span class="st">&#39;Elev P60 = Elevation at which 60% of the watershed area is above&#39;</span>,</span>
+<span id="cb38-4"><a href="results-and-discussion.html#cb38-4" tabindex="-1"></a>           <span class="at">scroll =</span> F)</span></code></pre></div>
 <table class="table table-condensed table-responsive" style="font-size: 11px; margin-left: auto; margin-right: auto;border-bottom: 0;">
 <caption style="font-size: initial !important;">
 <span id="tab:tab-wshd-198283">Table 4.6: </span>Summary of derived upstream watershed statistics for PSCIS crossing 198283.
@@ -1319,11 +1320,11 @@ SSE
 <h3><span class="header-section-number">4.2.1</span> Crossing Characteristics<a href="results-and-discussion.html#crossing-characteristics-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Before remediation, the Cross Creek culverts at PSCIS crossing 198283 were documented as 1.8m wide ovals culverts of 12.4m in length, having an outlet drop of 0.45m and a culvert slope of 2% <span class="citation">(MoE 2023c)</span>. The crossing ranked as a barrier to upstream migration according to the provincial protocol <span class="citation">(MoE 2011b)</span>. Photos taken in 2017 - before the remediation was completed are included as Figure <a href="results-and-discussion.html#fig:photo-cross-cv">4.10</a>. In 2022, the site was reassessed. As PSCIS crossing 198283 was a newly installed open bottomed structure it ranked as a passable to upstream fish passage according to the provincial protocol (Table <a href="results-and-discussion.html#tab:tab-culvert-198283">4.7</a>).</p>
 <p><br></p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="results-and-discussion.html#cb38-1" tabindex="-1"></a>my_photo1 <span class="ot">=</span> fpr<span class="sc">::</span><span class="fu">fpr_photo_pull_by_str</span>(<span class="at">site =</span> <span class="st">&#39;198283/before&#39;</span>, <span class="at">str_to_pull =</span> <span class="st">&#39;crossing&#39;</span>)</span>
-<span id="cb38-2"><a href="results-and-discussion.html#cb38-2" tabindex="-1"></a></span>
-<span id="cb38-3"><a href="results-and-discussion.html#cb38-3" tabindex="-1"></a>my_caption1 <span class="ot">=</span> <span class="fu">paste0</span>(<span class="st">&#39;Photos of culverts on Cross Creek taken in November 2017 before remediation of site.&#39;</span>)</span>
-<span id="cb38-4"><a href="results-and-discussion.html#cb38-4" tabindex="-1"></a></span>
-<span id="cb38-5"><a href="results-and-discussion.html#cb38-5" tabindex="-1"></a>grid<span class="sc">::</span><span class="fu">grid.raster</span>(jpeg<span class="sc">::</span><span class="fu">readJPEG</span>(my_photo1))</span></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="results-and-discussion.html#cb39-1" tabindex="-1"></a>my_photo1 <span class="ot">=</span> fpr<span class="sc">::</span><span class="fu">fpr_photo_pull_by_str</span>(<span class="at">site =</span> <span class="st">&#39;198283/before&#39;</span>, <span class="at">str_to_pull =</span> <span class="st">&#39;crossing&#39;</span>)</span>
+<span id="cb39-2"><a href="results-and-discussion.html#cb39-2" tabindex="-1"></a></span>
+<span id="cb39-3"><a href="results-and-discussion.html#cb39-3" tabindex="-1"></a>my_caption1 <span class="ot">=</span> <span class="fu">paste0</span>(<span class="st">&#39;Photos of culverts on Cross Creek taken in November 2017 before remediation of site.&#39;</span>)</span>
+<span id="cb39-4"><a href="results-and-discussion.html#cb39-4" tabindex="-1"></a></span>
+<span id="cb39-5"><a href="results-and-discussion.html#cb39-5" tabindex="-1"></a>grid<span class="sc">::</span><span class="fu">grid.raster</span>(jpeg<span class="sc">::</span><span class="fu">readJPEG</span>(my_photo1))</span></code></pre></div>
 <div class="figure"><span style="display:block;" id="fig:photo-cross-cv"></span>
 <img src="Moti2022_files/figure-html/photo-cross-cv-1.png" alt="Photos of culverts on Cross Creek taken in November 2017 before remediation of site." width="100%" />
 <p class="caption">
@@ -1331,7 +1332,7 @@ Figure 4.10: Photos of culverts on Cross Creek taken in November 2017 before rem
 </p>
 </div>
 <p><br></p>
-<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="results-and-discussion.html#cb39-1" tabindex="-1"></a>fpr<span class="sc">::</span><span class="fu">fpr_table_cv_summary_memo</span>(<span class="at">dat =</span> pscis_reassessments)</span></code></pre></div>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="results-and-discussion.html#cb40-1" tabindex="-1"></a>fpr<span class="sc">::</span><span class="fu">fpr_table_cv_summary_memo</span>(<span class="at">dat =</span> pscis_reassessments)</span></code></pre></div>
 <table class="table table-condensed" style="font-size: 11px; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
 <span id="tab:tab-culvert-198283">Table 4.7: </span>Summary of fish passage assessment for PSCIS crossing 198283.
@@ -1600,18 +1601,18 @@ Fix Span / Diameter
 </div>
 <div id="stream-characteristics-1" class="section level3 unnumbered hasAnchor">
 <h3>Stream Characteristics<a href="results-and-discussion.html#stream-characteristics-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The average channel width was 6m, the average wetted width was 3m, and the average gradient was 1.2%.Total cover amount was rated as moderate with undercut banks dominant. Cover was also present as small woody debris, large woody debris, and overhanging vegetation.The dominant substrate was gravels with cobbles sub-dominant. Water temperature was 13<span class="math inline">\(^\circ\)</span>C, pH was 8 and conductivity was 168uS/cm.</p>
+<p>The average channel width was 6m, the average wetted width was 3m, and the average gradient was 1.2%.The dominant substrate was gravels with cobbles sub-dominant.Total cover amount was rated as moderate with undercut banks dominant. Cover was also present as small woody debris, large woody debris, and overhanging vegetation. Water temperature was 13<span class="math inline">\(^\circ\)</span>C, pH was 8 and conductivity was 168uS/cm.</p>
 <p><br></p>
-<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="results-and-discussion.html#cb40-1" tabindex="-1"></a>model_url <span class="ot">&lt;-</span> <span class="st">&#39;&lt;iframe src=&quot;https://www.mapsmadeeasy.com/maps/public/bc05b8efed3f42f28fced92614b08edd&quot; scrolling=&quot;no&quot; title=&quot;Maps Made Easy&quot; width=&quot;100%&quot; height=&quot;600&quot; frameBorder =&quot;0&quot;&gt;&lt;/iframe&gt;&#39;</span></span>
-<span id="cb40-2"><a href="results-and-discussion.html#cb40-2" tabindex="-1"></a></span>
-<span id="cb40-3"><a href="results-and-discussion.html#cb40-3" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">asis_output</span>(model_url)</span></code></pre></div>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="results-and-discussion.html#cb41-1" tabindex="-1"></a>model_url <span class="ot">&lt;-</span> <span class="st">&#39;&lt;iframe src=&quot;https://www.mapsmadeeasy.com/maps/public/bc05b8efed3f42f28fced92614b08edd&quot; scrolling=&quot;no&quot; title=&quot;Maps Made Easy&quot; width=&quot;100%&quot; height=&quot;600&quot; frameBorder =&quot;0&quot;&gt;&lt;/iframe&gt;&#39;</span></span>
+<span id="cb41-2"><a href="results-and-discussion.html#cb41-2" tabindex="-1"></a></span>
+<span id="cb41-3"><a href="results-and-discussion.html#cb41-3" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">asis_output</span>(model_url)</span></code></pre></div>
 <iframe src="https://www.mapsmadeeasy.com/maps/public/bc05b8efed3f42f28fced92614b08edd" scrolling="no" title="Maps Made Easy" width="100%" height="600" frameBorder="0">
 </iframe>
-<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="results-and-discussion.html#cb41-1" tabindex="-1"></a>my_photo <span class="ot">=</span> <span class="st">&#39;fig/pixel.png&#39;</span></span>
-<span id="cb41-2"><a href="results-and-discussion.html#cb41-2" tabindex="-1"></a></span>
-<span id="cb41-3"><a href="results-and-discussion.html#cb41-3" tabindex="-1"></a>my_caption <span class="ot">=</span> <span class="fu">paste0</span>(<span class="st">&#39;Orthomosaic of newly installed open bottomed structure on Cross Creek.&#39;</span>)</span>
-<span id="cb41-4"><a href="results-and-discussion.html#cb41-4" tabindex="-1"></a></span>
-<span id="cb41-5"><a href="results-and-discussion.html#cb41-5" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(my_photo, <span class="at">dpi =</span> <span class="cn">NA</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="results-and-discussion.html#cb42-1" tabindex="-1"></a>my_photo <span class="ot">=</span> <span class="st">&#39;fig/pixel.png&#39;</span></span>
+<span id="cb42-2"><a href="results-and-discussion.html#cb42-2" tabindex="-1"></a></span>
+<span id="cb42-3"><a href="results-and-discussion.html#cb42-3" tabindex="-1"></a>my_caption <span class="ot">=</span> <span class="fu">paste0</span>(<span class="st">&#39;Orthomosaic of newly installed open bottomed structure on Cross Creek.&#39;</span>)</span>
+<span id="cb42-4"><a href="results-and-discussion.html#cb42-4" tabindex="-1"></a></span>
+<span id="cb42-5"><a href="results-and-discussion.html#cb42-5" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(my_photo, <span class="at">dpi =</span> <span class="cn">NA</span>)</span></code></pre></div>
 <div class="figure"><span style="display:block;" id="fig:ortho-caption-cross"></span>
 <img src="fig/pixel.png" alt="Orthomosaic of newly installed open bottomed structure on Cross Creek." width="0.01%" />
 <p class="caption">
@@ -1619,16 +1620,16 @@ Figure 4.11: Orthomosaic of newly installed open bottomed structure on Cross Cre
 </p>
 </div>
 <p><br></p>
-<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="results-and-discussion.html#cb42-1" tabindex="-1"></a>model_url <span class="ot">&lt;-</span> <span class="st">&#39;&lt;iframe src=&quot;https://www.mapsmadeeasy.com/maps/public_3D/bc05b8efed3f42f28fced92614b08edd&quot; scrolling=&quot;no&quot; title=&quot;Maps Made Easy&quot; width=&quot;100%&quot; height=&quot;600&quot; frameBorder =&quot;0&quot;&gt;&lt;/iframe&gt;&#39;</span></span>
-<span id="cb42-2"><a href="results-and-discussion.html#cb42-2" tabindex="-1"></a></span>
-<span id="cb42-3"><a href="results-and-discussion.html#cb42-3" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">asis_output</span>(model_url)</span></code></pre></div>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="results-and-discussion.html#cb43-1" tabindex="-1"></a>model_url <span class="ot">&lt;-</span> <span class="st">&#39;&lt;iframe src=&quot;https://www.mapsmadeeasy.com/maps/public_3D/bc05b8efed3f42f28fced92614b08edd&quot; scrolling=&quot;no&quot; title=&quot;Maps Made Easy&quot; width=&quot;100%&quot; height=&quot;600&quot; frameBorder =&quot;0&quot;&gt;&lt;/iframe&gt;&#39;</span></span>
+<span id="cb43-2"><a href="results-and-discussion.html#cb43-2" tabindex="-1"></a></span>
+<span id="cb43-3"><a href="results-and-discussion.html#cb43-3" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">asis_output</span>(model_url)</span></code></pre></div>
 <iframe src="https://www.mapsmadeeasy.com/maps/public_3D/bc05b8efed3f42f28fced92614b08edd" scrolling="no" title="Maps Made Easy" width="100%" height="600" frameBorder="0">
 </iframe>
-<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="results-and-discussion.html#cb43-1" tabindex="-1"></a>my_photo <span class="ot">=</span> <span class="st">&#39;fig/pixel.png&#39;</span></span>
-<span id="cb43-2"><a href="results-and-discussion.html#cb43-2" tabindex="-1"></a></span>
-<span id="cb43-3"><a href="results-and-discussion.html#cb43-3" tabindex="-1"></a>my_caption <span class="ot">=</span> <span class="fu">paste0</span>(<span class="st">&#39;3D model of newly installed open bottomed structure on Cross Creek.&#39;</span>)</span>
-<span id="cb43-4"><a href="results-and-discussion.html#cb43-4" tabindex="-1"></a></span>
-<span id="cb43-5"><a href="results-and-discussion.html#cb43-5" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(my_photo, <span class="at">dpi =</span> <span class="cn">NA</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="results-and-discussion.html#cb44-1" tabindex="-1"></a>my_photo <span class="ot">=</span> <span class="st">&#39;fig/pixel.png&#39;</span></span>
+<span id="cb44-2"><a href="results-and-discussion.html#cb44-2" tabindex="-1"></a></span>
+<span id="cb44-3"><a href="results-and-discussion.html#cb44-3" tabindex="-1"></a>my_caption <span class="ot">=</span> <span class="fu">paste0</span>(<span class="st">&#39;3D model of newly installed open bottomed structure on Cross Creek.&#39;</span>)</span>
+<span id="cb44-4"><a href="results-and-discussion.html#cb44-4" tabindex="-1"></a></span>
+<span id="cb44-5"><a href="results-and-discussion.html#cb44-5" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(my_photo, <span class="at">dpi =</span> <span class="cn">NA</span>)</span></code></pre></div>
 <div class="figure"><span style="display:block;" id="fig:model-caption-cross"></span>
 <img src="fig/pixel.png" alt="3D model of newly installed open bottomed structure on Cross Creek." width="0.01%" />
 <p class="caption">
@@ -1636,10 +1637,10 @@ Figure 4.12: 3D model of newly installed open bottomed structure on Cross Creek.
 </p>
 </div>
 <p><br></p>
-<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="results-and-discussion.html#cb44-1" tabindex="-1"></a>tab_hab_summary <span class="sc">%&gt;%</span> </span>
-<span id="cb44-2"><a href="results-and-discussion.html#cb44-2" tabindex="-1"></a>  <span class="fu">filter</span>(Site <span class="sc">==</span> <span class="st">&#39;198283_ds&#39;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb44-3"><a href="results-and-discussion.html#cb44-3" tabindex="-1"></a>  fpr<span class="sc">::</span><span class="fu">fpr_kable</span>(<span class="at">caption_text =</span> <span class="fu">paste0</span>(<span class="st">&#39;Summary of habitat details for area surveyed downstream of PSCIS crossing &#39;</span>, my_site, <span class="st">&#39; on Cross Creek as well as within the replacement open bottomed structure (198283_x).&#39;</span>),</span>
-<span id="cb44-4"><a href="results-and-discussion.html#cb44-4" tabindex="-1"></a>                 <span class="at">scroll =</span> F) </span></code></pre></div>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="results-and-discussion.html#cb45-1" tabindex="-1"></a>tab_hab_summary <span class="sc">%&gt;%</span> </span>
+<span id="cb45-2"><a href="results-and-discussion.html#cb45-2" tabindex="-1"></a>  <span class="fu">filter</span>(Site <span class="sc">==</span> <span class="st">&#39;198283_ds&#39;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb45-3"><a href="results-and-discussion.html#cb45-3" tabindex="-1"></a>  fpr<span class="sc">::</span><span class="fu">fpr_kable</span>(<span class="at">caption_text =</span> <span class="fu">paste0</span>(<span class="st">&#39;Summary of habitat details for area surveyed downstream of PSCIS crossing &#39;</span>, my_site, <span class="st">&#39; on Cross Creek as well as within the replacement open bottomed structure (198283_x).&#39;</span>),</span>
+<span id="cb45-4"><a href="results-and-discussion.html#cb45-4" tabindex="-1"></a>                 <span class="at">scroll =</span> F) </span></code></pre></div>
 <table class="table table-condensed table-responsive" style="font-size: 11px; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
 <span id="tab:tab-habitat-summary-198283">Table 4.8: </span>Summary of habitat details for area surveyed downstream of PSCIS crossing 198283 on Cross Creek as well as within the replacement open bottomed structure (198283_x).
@@ -1707,10 +1708,10 @@ high
 <h3><span class="header-section-number">4.2.2</span> Discussion<a href="results-and-discussion.html#discussion-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Overall, the restoration of fish passage at Cross Creek appears to be successful demonstrating meaningful collaboration between numerous groups including Lake Babine Nation, Spruce City Wildlife Association, the Ministry of Transportation and Infrastructure, Fisheries and Oceans Canada and Canadian Wildlife Federation. The streambed appears to be filling in well following one year of flows since restoration and at the time of assessment in 2022, numerous sockeye and kokanee were observed spawning upstream of the crossing. Follow up is recommended in 2023 to determine success of naturally regenerating riparian cottonwood seedlings as well as cuttings planted within the soil arched structure.</p>
 <p><br></p>
-<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="results-and-discussion.html#cb45-1" tabindex="-1"></a>my_photo1 <span class="ot">=</span> fpr<span class="sc">::</span><span class="fu">fpr_photo_pull_by_str</span>(<span class="at">site =</span> my_site, <span class="at">str_to_pull =</span> <span class="st">&#39;_d2_&#39;</span>)</span>
-<span id="cb45-2"><a href="results-and-discussion.html#cb45-2" tabindex="-1"></a></span>
-<span id="cb45-3"><a href="results-and-discussion.html#cb45-3" tabindex="-1"></a>my_caption1 <span class="ot">=</span> <span class="fu">paste0</span>(<span class="st">&#39;Typical habitat downstream of PSCIS crossing &#39;</span>, my_site, <span class="st">&#39;in Cross Creek showing high value spawning gravels.&#39;</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="results-and-discussion.html#cb46-1" tabindex="-1"></a>grid<span class="sc">::</span><span class="fu">grid.raster</span>(jpeg<span class="sc">::</span><span class="fu">readJPEG</span>(my_photo1))</span></code></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="results-and-discussion.html#cb46-1" tabindex="-1"></a>my_photo1 <span class="ot">=</span> fpr<span class="sc">::</span><span class="fu">fpr_photo_pull_by_str</span>(<span class="at">site =</span> my_site, <span class="at">str_to_pull =</span> <span class="st">&#39;_d2_&#39;</span>)</span>
+<span id="cb46-2"><a href="results-and-discussion.html#cb46-2" tabindex="-1"></a></span>
+<span id="cb46-3"><a href="results-and-discussion.html#cb46-3" tabindex="-1"></a>my_caption1 <span class="ot">=</span> <span class="fu">paste0</span>(<span class="st">&#39;Typical habitat downstream of PSCIS crossing &#39;</span>, my_site, <span class="st">&#39;in Cross Creek showing high value spawning gravels.&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="results-and-discussion.html#cb47-1" tabindex="-1"></a>grid<span class="sc">::</span><span class="fu">grid.raster</span>(jpeg<span class="sc">::</span><span class="fu">readJPEG</span>(my_photo1))</span></code></pre></div>
 <div class="figure"><span style="display:block;" id="fig:photo-198283-01"></span>
 <img src="Moti2022_files/figure-html/photo-198283-01-1.png" alt="Typical habitat downstream of PSCIS crossing 198283in Cross Creek showing high value spawning gravels." width="100%" />
 <p class="caption">
@@ -1718,26 +1719,26 @@ Figure 4.13: Typical habitat downstream of PSCIS crossing 198283in Cross Creek s
 </p>
 </div>
 <p><br></p>
-<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="results-and-discussion.html#cb47-1" tabindex="-1"></a>my_photo2 <span class="ot">=</span> fpr<span class="sc">::</span><span class="fu">fpr_photo_pull_by_str</span>(<span class="at">site =</span> my_site, <span class="at">str_to_pull =</span> <span class="st">&#39;_d3_&#39;</span>)</span>
-<span id="cb47-2"><a href="results-and-discussion.html#cb47-2" tabindex="-1"></a></span>
-<span id="cb47-3"><a href="results-and-discussion.html#cb47-3" tabindex="-1"></a>my_caption2 <span class="ot">=</span> <span class="fu">paste0</span>(<span class="st">&#39;Typical habitat downstream of PSCIS crossing &#39;</span>, my_site, <span class="st">&#39; in Cross Creek.&#39;</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="results-and-discussion.html#cb48-1" tabindex="-1"></a>grid<span class="sc">::</span><span class="fu">grid.raster</span>(jpeg<span class="sc">::</span><span class="fu">readJPEG</span>(my_photo2))</span></code></pre></div>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="results-and-discussion.html#cb48-1" tabindex="-1"></a>my_photo2 <span class="ot">=</span> fpr<span class="sc">::</span><span class="fu">fpr_photo_pull_by_str</span>(<span class="at">site =</span> my_site, <span class="at">str_to_pull =</span> <span class="st">&#39;_d3_&#39;</span>)</span>
+<span id="cb48-2"><a href="results-and-discussion.html#cb48-2" tabindex="-1"></a></span>
+<span id="cb48-3"><a href="results-and-discussion.html#cb48-3" tabindex="-1"></a>my_caption2 <span class="ot">=</span> <span class="fu">paste0</span>(<span class="st">&#39;Typical habitat downstream of PSCIS crossing &#39;</span>, my_site, <span class="st">&#39; in Cross Creek.&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="results-and-discussion.html#cb49-1" tabindex="-1"></a>grid<span class="sc">::</span><span class="fu">grid.raster</span>(jpeg<span class="sc">::</span><span class="fu">readJPEG</span>(my_photo2))</span></code></pre></div>
 <div class="figure"><span style="display:block;" id="fig:photo-198283-02"></span>
 <img src="Moti2022_files/figure-html/photo-198283-02-1.png" alt="Typical habitat downstream of PSCIS crossing 198283 in Cross Creek." width="100%" />
 <p class="caption">
 Figure 4.14: Typical habitat downstream of PSCIS crossing 198283 in Cross Creek.
 </p>
 </div>
-<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="results-and-discussion.html#cb49-1" tabindex="-1"></a>my_caption <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&#39;Left: &#39;</span>, my_caption1, <span class="st">&#39; Right: &#39;</span>, my_caption2)</span>
-<span id="cb49-2"><a href="results-and-discussion.html#cb49-2" tabindex="-1"></a></span>
-<span id="cb49-3"><a href="results-and-discussion.html#cb49-3" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(my_photo1)</span>
-<span id="cb49-4"><a href="results-and-discussion.html#cb49-4" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;fig/pixel.png&quot;</span>)</span>
-<span id="cb49-5"><a href="results-and-discussion.html#cb49-5" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(my_photo2)</span></code></pre></div>
-<p><br></p>
-<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="results-and-discussion.html#cb50-1" tabindex="-1"></a>my_photo1 <span class="ot">=</span> fpr<span class="sc">::</span><span class="fu">fpr_photo_pull_by_str</span>(<span class="at">site =</span> my_site, <span class="at">str_to_pull =</span> <span class="st">&#39;_u1_&#39;</span>)</span>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="results-and-discussion.html#cb50-1" tabindex="-1"></a>my_caption <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&#39;Left: &#39;</span>, my_caption1, <span class="st">&#39; Right: &#39;</span>, my_caption2)</span>
 <span id="cb50-2"><a href="results-and-discussion.html#cb50-2" tabindex="-1"></a></span>
-<span id="cb50-3"><a href="results-and-discussion.html#cb50-3" tabindex="-1"></a>my_caption1 <span class="ot">=</span> <span class="fu">paste0</span>(<span class="st">&#39;Habitat upstream of PSCIS crossing &#39;</span>, my_site, <span class="st">&#39; in Cross Creek.&#39;</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="results-and-discussion.html#cb51-1" tabindex="-1"></a>grid<span class="sc">::</span><span class="fu">grid.raster</span>(jpeg<span class="sc">::</span><span class="fu">readJPEG</span>(my_photo1))</span></code></pre></div>
+<span id="cb50-3"><a href="results-and-discussion.html#cb50-3" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(my_photo1)</span>
+<span id="cb50-4"><a href="results-and-discussion.html#cb50-4" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;fig/pixel.png&quot;</span>)</span>
+<span id="cb50-5"><a href="results-and-discussion.html#cb50-5" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(my_photo2)</span></code></pre></div>
+<p><br></p>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="results-and-discussion.html#cb51-1" tabindex="-1"></a>my_photo1 <span class="ot">=</span> fpr<span class="sc">::</span><span class="fu">fpr_photo_pull_by_str</span>(<span class="at">site =</span> my_site, <span class="at">str_to_pull =</span> <span class="st">&#39;_u1_&#39;</span>)</span>
+<span id="cb51-2"><a href="results-and-discussion.html#cb51-2" tabindex="-1"></a></span>
+<span id="cb51-3"><a href="results-and-discussion.html#cb51-3" tabindex="-1"></a>my_caption1 <span class="ot">=</span> <span class="fu">paste0</span>(<span class="st">&#39;Habitat upstream of PSCIS crossing &#39;</span>, my_site, <span class="st">&#39; in Cross Creek.&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="results-and-discussion.html#cb52-1" tabindex="-1"></a>grid<span class="sc">::</span><span class="fu">grid.raster</span>(jpeg<span class="sc">::</span><span class="fu">readJPEG</span>(my_photo1))</span></code></pre></div>
 <div class="figure"><span style="display:block;" id="fig:photo-198283-03"></span>
 <img src="Moti2022_files/figure-html/photo-198283-03-1.png" alt="Habitat upstream of PSCIS crossing 198283 in Cross Creek." width="100%" />
 <p class="caption">
@@ -1745,29 +1746,29 @@ Figure 4.15: Habitat upstream of PSCIS crossing 198283 in Cross Creek.
 </p>
 </div>
 <p><br></p>
-<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="results-and-discussion.html#cb52-1" tabindex="-1"></a>my_photo2 <span class="ot">=</span> fpr<span class="sc">::</span><span class="fu">fpr_photo_pull_by_str</span>(<span class="at">site =</span> my_site, <span class="at">str_to_pull =</span> <span class="st">&#39;embankment&#39;</span>)</span>
-<span id="cb52-2"><a href="results-and-discussion.html#cb52-2" tabindex="-1"></a></span>
-<span id="cb52-3"><a href="results-and-discussion.html#cb52-3" tabindex="-1"></a>my_caption2 <span class="ot">=</span> <span class="fu">paste0</span>(<span class="st">&#39;Habitat immediately upstream of PSCIS crossing &#39;</span>, my_site, <span class="st">&#39; in Cross Creek.&#39;</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="results-and-discussion.html#cb53-1" tabindex="-1"></a>grid<span class="sc">::</span><span class="fu">grid.raster</span>(jpeg<span class="sc">::</span><span class="fu">readJPEG</span>(my_photo2))</span></code></pre></div>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="results-and-discussion.html#cb53-1" tabindex="-1"></a>my_photo2 <span class="ot">=</span> fpr<span class="sc">::</span><span class="fu">fpr_photo_pull_by_str</span>(<span class="at">site =</span> my_site, <span class="at">str_to_pull =</span> <span class="st">&#39;embankment&#39;</span>)</span>
+<span id="cb53-2"><a href="results-and-discussion.html#cb53-2" tabindex="-1"></a></span>
+<span id="cb53-3"><a href="results-and-discussion.html#cb53-3" tabindex="-1"></a>my_caption2 <span class="ot">=</span> <span class="fu">paste0</span>(<span class="st">&#39;Habitat immediately upstream of PSCIS crossing &#39;</span>, my_site, <span class="st">&#39; in Cross Creek.&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="results-and-discussion.html#cb54-1" tabindex="-1"></a>grid<span class="sc">::</span><span class="fu">grid.raster</span>(jpeg<span class="sc">::</span><span class="fu">readJPEG</span>(my_photo2))</span></code></pre></div>
 <div class="figure"><span style="display:block;" id="fig:photo-198283-04"></span>
 <img src="Moti2022_files/figure-html/photo-198283-04-1.png" alt="Habitat immediately upstream of PSCIS crossing 198283 in Cross Creek." width="100%" />
 <p class="caption">
 Figure 4.16: Habitat immediately upstream of PSCIS crossing 198283 in Cross Creek.
 </p>
 </div>
-<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="results-and-discussion.html#cb54-1" tabindex="-1"></a>my_caption <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&#39;Left: &#39;</span>, my_caption1, <span class="st">&#39; Right: &#39;</span>, my_caption2)</span>
-<span id="cb54-2"><a href="results-and-discussion.html#cb54-2" tabindex="-1"></a></span>
-<span id="cb54-3"><a href="results-and-discussion.html#cb54-3" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(my_photo1)</span>
-<span id="cb54-4"><a href="results-and-discussion.html#cb54-4" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;fig/pixel.png&quot;</span>)</span>
-<span id="cb54-5"><a href="results-and-discussion.html#cb54-5" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(my_photo2)</span></code></pre></div>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="results-and-discussion.html#cb55-1" tabindex="-1"></a>my_caption <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&#39;Left: &#39;</span>, my_caption1, <span class="st">&#39; Right: &#39;</span>, my_caption2)</span>
+<span id="cb55-2"><a href="results-and-discussion.html#cb55-2" tabindex="-1"></a></span>
+<span id="cb55-3"><a href="results-and-discussion.html#cb55-3" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(my_photo1)</span>
+<span id="cb55-4"><a href="results-and-discussion.html#cb55-4" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;fig/pixel.png&quot;</span>)</span>
+<span id="cb55-5"><a href="results-and-discussion.html#cb55-5" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(my_photo2)</span></code></pre></div>
 </div>
 </div>
 <div id="five-mile-creek---198400" class="section level2 hasAnchor" number="4.3">
 <h2><span class="header-section-number">4.3</span> Five Mile Creek - 198400<a href="results-and-discussion.html#five-mile-creek---198400" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="results-and-discussion.html#cb55-1" tabindex="-1"></a>my_site <span class="ot">&lt;-</span> <span class="dv">198400</span></span></code></pre></div>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="results-and-discussion.html#cb56-1" tabindex="-1"></a>my_site <span class="ot">&lt;-</span> <span class="dv">198400</span></span></code></pre></div>
 <p>PSCIS crossing 198400 is located on Five Mile Creek under Highway 97 approximately 11km east of Williams Lake within the San Jose River watershed group (Figures <a href="background.html#fig:map-overview">2.1</a> - <a href="results-and-discussion.html#fig:lidar-5mile">4.18</a>. The structure is located within the boundaries of the Williams Lake 1 First Nation Reservation. The area around Five Mile Creek is home to T’exelcemc people of the T’exelc First Nation. The T’exelc First Nation (also known as the Williams Lake Indian Band) is part of the larger Secwepemc (Shuswap) Nation with traditional territory covering a vast area of central British Columbia. Secwepemctsin is the language of the Secwepem. It contains the cultural, ecological, and historical knowledge connecting the land and the people <span class="citation">(T’exelcemc 2023; First Peoples’ Cultural Council 2023)</span>. The Five Mile Creek watershed upstream of the Highway encompasses three other First Nations reserve areas including Five Mile 3, James Louis 3A and Carpenter Mountain 15. Replacement of the historic structure (900mm round culvert) in 2016 was necessary to four-laneing Highway 97.</p>
 <p><br></p>
-<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="results-and-discussion.html#cb56-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;fig/5mile.png&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="results-and-discussion.html#cb57-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;fig/5mile.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span style="display:block;" id="fig:map-5mile"></span>
 <img src="fig/5mile.png" alt="Map of Five Mile Creek watershed." width="100%" />
 <p class="caption">
@@ -1775,7 +1776,7 @@ Figure 4.17: Map of Five Mile Creek watershed.
 </p>
 </div>
 <p><br></p>
-<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="results-and-discussion.html#cb57-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;fig/lidar_5mile.png&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="results-and-discussion.html#cb58-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;fig/lidar_5mile.png&quot;</span>)</span></code></pre></div>
 <div class="figure"><span style="display:block;" id="fig:lidar-5mile"></span>
 <img src="fig/lidar_5mile.png" alt="Lidar generated digital elevation model of Five Mile Creek at Highway 97." width="100%" />
 <p class="caption">
@@ -1790,10 +1791,10 @@ Figure 4.18: Lidar generated digital elevation model of Five Mile Creek at Highw
 <p><br></p>
 <p>On assignment from Ministry of Transportation and Infrastructure in 2010, <span class="citation">Triton Environmental Consultants Ltd. (2014)</span> captured rainbow trout downstream of the culvert with minimal effort however no fish were captured upstream of the crossing with 108 seconds of electrofishing effort. <span class="citation">Caribou Envirotech Ltd. (2005)</span> sampled Five Mile Creek and an unnamed lake (00089SAJR) located approximately 5km upstream of the highway to provide information related to planning for construction of a dam on the lake. They documented taht the portion of Five Mile Creek located immediately downstream of the unnamed lake was a man-made ditch divided into drainage channels for water dispersal downstream. The noted that water temperatures were likely to be very high in the summer months and ranked the habitat value as “very poor”.</p>
 <p><br></p>
-<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="results-and-discussion.html#cb58-1" tabindex="-1"></a>fpr<span class="sc">::</span><span class="fu">fpr_table_wshd_sum</span>(<span class="at">site_id =</span> <span class="dv">999</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb58-2"><a href="results-and-discussion.html#cb58-2" tabindex="-1"></a>  fpr<span class="sc">::</span><span class="fu">fpr_kable</span>(<span class="at">caption_text =</span> <span class="fu">paste0</span>(<span class="st">&#39;Summary of derived upstream watershed statistics for PSCIS crossing &#39;</span>, <span class="st">&#39;198400 on Five Mile Creek.&#39;</span>),</span>
-<span id="cb58-3"><a href="results-and-discussion.html#cb58-3" tabindex="-1"></a>           <span class="at">footnote_text =</span> <span class="st">&#39;Elev P60 = Elevation at which 60% of the watershed area is above&#39;</span>,</span>
-<span id="cb58-4"><a href="results-and-discussion.html#cb58-4" tabindex="-1"></a>           <span class="at">scroll =</span> F)</span></code></pre></div>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="results-and-discussion.html#cb59-1" tabindex="-1"></a>fpr<span class="sc">::</span><span class="fu">fpr_table_wshd_sum</span>(<span class="at">site_id =</span> <span class="dv">999</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb59-2"><a href="results-and-discussion.html#cb59-2" tabindex="-1"></a>  fpr<span class="sc">::</span><span class="fu">fpr_kable</span>(<span class="at">caption_text =</span> <span class="fu">paste0</span>(<span class="st">&#39;Summary of derived upstream watershed statistics for PSCIS crossing &#39;</span>, <span class="st">&#39;198400 on Five Mile Creek.&#39;</span>),</span>
+<span id="cb59-3"><a href="results-and-discussion.html#cb59-3" tabindex="-1"></a>           <span class="at">footnote_text =</span> <span class="st">&#39;Elev P60 = Elevation at which 60% of the watershed area is above&#39;</span>,</span>
+<span id="cb59-4"><a href="results-and-discussion.html#cb59-4" tabindex="-1"></a>           <span class="at">scroll =</span> F)</span></code></pre></div>
 <table class="table table-condensed table-responsive" style="font-size: 11px; margin-left: auto; margin-right: auto;border-bottom: 0;">
 <caption style="font-size: initial !important;">
 <span id="tab:tab-wshd-198400">Table 4.9: </span>Summary of derived upstream watershed statistics for PSCIS crossing 198400 on Five Mile Creek.
@@ -1868,7 +1869,7 @@ S
 <p><br></p>
 <p>The highway crossing on Five Mile Creek was assessed on September 16, 2022. PSCIS crossing 198400 was embedded 80cm at the outlet of the culvert with no embeddedness at the inlet. Due to the length of the 2.25m diameter round pipe (55m), a lack of embeddedness and culvert slope (3%) the structure ranked as a barrier to upstream fish passage according to the provincial protocol (Table <a href="results-and-discussion.html#tab:tab-culvert-198283">4.7</a>).</p>
 <p><br></p>
-<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="results-and-discussion.html#cb59-1" tabindex="-1"></a>fpr<span class="sc">::</span><span class="fu">fpr_table_cv_summary_memo</span>(<span class="at">dat =</span> pscis_phase1, <span class="at">site =</span> <span class="dv">17501664</span>, <span class="at">col_filter =</span> my_crossing_reference)</span></code></pre></div>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="results-and-discussion.html#cb60-1" tabindex="-1"></a>fpr<span class="sc">::</span><span class="fu">fpr_table_cv_summary_memo</span>(<span class="at">dat =</span> pscis_phase1, <span class="at">site =</span> <span class="dv">17501664</span>, <span class="at">col_filter =</span> my_crossing_reference)</span></code></pre></div>
 <table class="table table-condensed" style="font-size: 11px; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
 <span id="tab:tab-culvert-198400">Table 4.10: </span>Summary of fish passage assessment for PSCIS crossing 17501664.
@@ -2134,12 +2135,12 @@ Fix Span / Diameter
 </div>
 <div id="stream-characteristics-2" class="section level3 hasAnchor" number="4.3.2">
 <h3><span class="header-section-number">4.3.2</span> Stream Characteristics<a href="results-and-discussion.html#stream-characteristics-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Upstream of the highway, the stream was surveyed for m. The average channel width was 2.3m, the average wetted width was 2.1m, and the average gradient was 5.2%.Total cover amount was rated as moderate with undercut banks dominant. Cover was also present as boulders and overhanging vegetation.The dominant substrate was fines with boulders sub-dominant. Water temperature was 10.8<span class="math inline">\(^\circ\)</span>C, pH was 8.3 and conductivity was 814uS/cm. The average channel width was 2.3m, the average wetted width was 2.1m, and the average gradient was 5.2%.Total cover amount was rated as moderate with undercut banks dominant. Cover was also present as boulders and overhanging vegetation.The dominant substrate was fines with boulders sub-dominant. (Table <a href="results-and-discussion.html#tab:tab-habitat-summary-198400">4.11</a>). At the time of the survey flows were high (bankfull depth) due to recent rain events and the water was very turbid. Habitat value was assessed as low due to poor water quality and the small size of the stream.</p>
+<p>Upstream of the highway, the stream was surveyed for m. Total cover amount was rated as moderate with undercut banks dominant. Cover was also present as boulders and overhanging vegetation.The average channel width was 2.3m, the average wetted width was 2.1m, and the average gradient was 5.2%.The dominant substrate was fines with boulders sub-dominant. Water temperature was 10.8<span class="math inline">\(^\circ\)</span>C, pH was 8.3 and conductivity was 814uS/cm. The average channel width was 2.3m, the average wetted width was 2.1m, and the average gradient was 5.2%.Total cover amount was rated as moderate with undercut banks dominant. Cover was also present as boulders and overhanging vegetation.The dominant substrate was fines with boulders sub-dominant. (Table <a href="results-and-discussion.html#tab:tab-habitat-summary-198400">4.11</a>). At the time of the survey flows were high (bankfull depth) due to recent rain events and the water was very turbid. Habitat value was assessed as low due to poor water quality and the small size of the stream.</p>
 <p><br></p>
-<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="results-and-discussion.html#cb60-1" tabindex="-1"></a>tab_hab_summary <span class="sc">%&gt;%</span> </span>
-<span id="cb60-2"><a href="results-and-discussion.html#cb60-2" tabindex="-1"></a>  <span class="fu">filter</span>(Site <span class="sc">%like%</span> my_site) <span class="sc">%&gt;%</span></span>
-<span id="cb60-3"><a href="results-and-discussion.html#cb60-3" tabindex="-1"></a>  fpr<span class="sc">::</span><span class="fu">fpr_kable</span>(<span class="at">caption_text =</span> <span class="fu">paste0</span>(<span class="st">&#39;Summary of habitat details for ara surveyed upstream of PSCIS crossing &#39;</span>, my_site, <span class="st">&#39; on Five Mile Creek.&#39;</span>),</span>
-<span id="cb60-4"><a href="results-and-discussion.html#cb60-4" tabindex="-1"></a>                 <span class="at">scroll =</span> F) </span></code></pre></div>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="results-and-discussion.html#cb61-1" tabindex="-1"></a>tab_hab_summary <span class="sc">%&gt;%</span> </span>
+<span id="cb61-2"><a href="results-and-discussion.html#cb61-2" tabindex="-1"></a>  <span class="fu">filter</span>(Site <span class="sc">%like%</span> my_site) <span class="sc">%&gt;%</span></span>
+<span id="cb61-3"><a href="results-and-discussion.html#cb61-3" tabindex="-1"></a>  fpr<span class="sc">::</span><span class="fu">fpr_kable</span>(<span class="at">caption_text =</span> <span class="fu">paste0</span>(<span class="st">&#39;Summary of habitat details for ara surveyed upstream of PSCIS crossing &#39;</span>, my_site, <span class="st">&#39; on Five Mile Creek.&#39;</span>),</span>
+<span id="cb61-4"><a href="results-and-discussion.html#cb61-4" tabindex="-1"></a>                 <span class="at">scroll =</span> F) </span></code></pre></div>
 <table class="table table-condensed table-responsive" style="font-size: 11px; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
 <span id="tab:tab-habitat-summary-198400">Table 4.11: </span>Summary of habitat details for ara surveyed upstream of PSCIS crossing 198400 on Five Mile Creek.
@@ -2209,10 +2210,10 @@ moderate
 <p><br></p>
 <p>Replacement of crossing structures for small streams on large highways can be extremely expensive, requiring significant resources and time to complete. Although not ideal for facilitating upstream fish migration, horizontal drilling of pipes (versus the installation of open bottom structures) can help reduce costs related to construction and proper embedding of these pipes with substrate similiar to that found in adjacent natural reaches can provide conditions suitable for upstream fish migration. Although the highway crossing ranked as a barrier to upstream migration, embedding the pipe for its full length would result in a ranking of “potential” barrier and likely provide channel roughness conditions suitable for all life stages of rainbow trout to migrate upstream. For this reason we recommend the addition of large cobble and boulder substrate at the upstream end of the pipe. We also recommend that silt fencing installed for erosion and sediment control during construction be removed at the same time.</p>
 <p><br></p>
-<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="results-and-discussion.html#cb61-1" tabindex="-1"></a>my_photo1 <span class="ot">=</span> fpr<span class="sc">::</span><span class="fu">fpr_photo_pull_by_str</span>(<span class="at">site =</span> my_site, <span class="at">str_to_pull =</span> <span class="st">&#39;_u1_&#39;</span>)</span>
-<span id="cb61-2"><a href="results-and-discussion.html#cb61-2" tabindex="-1"></a></span>
-<span id="cb61-3"><a href="results-and-discussion.html#cb61-3" tabindex="-1"></a>my_caption1 <span class="ot">=</span><span class="st">&#39;Habitat within construction footprint upstream of PSCIS crossing 198400 in Five Mile Creek.&#39;</span></span></code></pre></div>
-<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="results-and-discussion.html#cb62-1" tabindex="-1"></a>grid<span class="sc">::</span><span class="fu">grid.raster</span>(jpeg<span class="sc">::</span><span class="fu">readJPEG</span>(my_photo1))</span></code></pre></div>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="results-and-discussion.html#cb62-1" tabindex="-1"></a>my_photo1 <span class="ot">=</span> fpr<span class="sc">::</span><span class="fu">fpr_photo_pull_by_str</span>(<span class="at">site =</span> my_site, <span class="at">str_to_pull =</span> <span class="st">&#39;_u1_&#39;</span>)</span>
+<span id="cb62-2"><a href="results-and-discussion.html#cb62-2" tabindex="-1"></a></span>
+<span id="cb62-3"><a href="results-and-discussion.html#cb62-3" tabindex="-1"></a>my_caption1 <span class="ot">=</span><span class="st">&#39;Habitat within construction footprint upstream of PSCIS crossing 198400 in Five Mile Creek.&#39;</span></span></code></pre></div>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="results-and-discussion.html#cb63-1" tabindex="-1"></a>grid<span class="sc">::</span><span class="fu">grid.raster</span>(jpeg<span class="sc">::</span><span class="fu">readJPEG</span>(my_photo1))</span></code></pre></div>
 <div class="figure"><span style="display:block;" id="fig:photo-198400-01"></span>
 <img src="Moti2022_files/figure-html/photo-198400-01-1.png" alt="Habitat within construction footprint upstream of PSCIS crossing 198400 in Five Mile Creek." width="100%" />
 <p class="caption">
@@ -2220,21 +2221,21 @@ Figure 4.19: Habitat within construction footprint upstream of PSCIS crossing 19
 </p>
 </div>
 <p><br></p>
-<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="results-and-discussion.html#cb63-1" tabindex="-1"></a>my_photo2 <span class="ot">=</span> fpr<span class="sc">::</span><span class="fu">fpr_photo_pull_by_str</span>(<span class="at">site =</span> my_site, <span class="at">str_to_pull =</span> <span class="st">&#39;_u2_&#39;</span>)</span>
-<span id="cb63-2"><a href="results-and-discussion.html#cb63-2" tabindex="-1"></a></span>
-<span id="cb63-3"><a href="results-and-discussion.html#cb63-3" tabindex="-1"></a>my_caption2 <span class="ot">=</span> <span class="st">&#39;Habitat upstream of construction footprint adjacent to crossing 198400 in Five Mile Creek.&#39;</span></span></code></pre></div>
-<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="results-and-discussion.html#cb64-1" tabindex="-1"></a>grid<span class="sc">::</span><span class="fu">grid.raster</span>(jpeg<span class="sc">::</span><span class="fu">readJPEG</span>(my_photo2))</span></code></pre></div>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="results-and-discussion.html#cb64-1" tabindex="-1"></a>my_photo2 <span class="ot">=</span> fpr<span class="sc">::</span><span class="fu">fpr_photo_pull_by_str</span>(<span class="at">site =</span> my_site, <span class="at">str_to_pull =</span> <span class="st">&#39;_u2_&#39;</span>)</span>
+<span id="cb64-2"><a href="results-and-discussion.html#cb64-2" tabindex="-1"></a></span>
+<span id="cb64-3"><a href="results-and-discussion.html#cb64-3" tabindex="-1"></a>my_caption2 <span class="ot">=</span> <span class="st">&#39;Habitat upstream of construction footprint adjacent to crossing 198400 in Five Mile Creek.&#39;</span></span></code></pre></div>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="results-and-discussion.html#cb65-1" tabindex="-1"></a>grid<span class="sc">::</span><span class="fu">grid.raster</span>(jpeg<span class="sc">::</span><span class="fu">readJPEG</span>(my_photo2))</span></code></pre></div>
 <div class="figure"><span style="display:block;" id="fig:photo-198400-02"></span>
 <img src="Moti2022_files/figure-html/photo-198400-02-1.png" alt="Habitat upstream of construction footprint adjacent to crossing 198400 in Five Mile Creek." width="100%" />
 <p class="caption">
 Figure 4.20: Habitat upstream of construction footprint adjacent to crossing 198400 in Five Mile Creek.
 </p>
 </div>
-<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="results-and-discussion.html#cb65-1" tabindex="-1"></a>my_caption <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&#39;Left: &#39;</span>, my_caption1, <span class="st">&#39; Right: &#39;</span>, my_caption2)</span>
-<span id="cb65-2"><a href="results-and-discussion.html#cb65-2" tabindex="-1"></a></span>
-<span id="cb65-3"><a href="results-and-discussion.html#cb65-3" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(my_photo1)</span>
-<span id="cb65-4"><a href="results-and-discussion.html#cb65-4" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;fig/pixel.png&quot;</span>)</span>
-<span id="cb65-5"><a href="results-and-discussion.html#cb65-5" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(my_photo2)</span></code></pre></div>
+<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="results-and-discussion.html#cb66-1" tabindex="-1"></a>my_caption <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&#39;Left: &#39;</span>, my_caption1, <span class="st">&#39; Right: &#39;</span>, my_caption2)</span>
+<span id="cb66-2"><a href="results-and-discussion.html#cb66-2" tabindex="-1"></a></span>
+<span id="cb66-3"><a href="results-and-discussion.html#cb66-3" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(my_photo1)</span>
+<span id="cb66-4"><a href="results-and-discussion.html#cb66-4" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">&quot;fig/pixel.png&quot;</span>)</span>
+<span id="cb66-5"><a href="results-and-discussion.html#cb66-5" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(my_photo2)</span></code></pre></div>
 
 </div>
 </div>
