@@ -1,5 +1,8 @@
 # fish_passage_moti_2022_reporting 0.0.2 (2024-07-11)
 - Correct utm error for Cross Creek
+- update packages
+- add changelog
+- use staticimports functions 
 
 
 
