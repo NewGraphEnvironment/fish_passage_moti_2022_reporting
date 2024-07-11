@@ -37,7 +37,10 @@ preview_chapter('index.Rmd')
 #################################################################################################
 ##go to the index.Rmd and change gitbook_on <- TRUE
 #################################################################################################
-
+# update util file functions from staticimports
+staticimports::import()
+source('scripts/staticimports.R')
+my_news_to_appendix()
 rmarkdown::render_site(output_format = 'bookdown::gitbook',
                        encoding = 'UTF-8')
 
@@ -75,3 +78,6 @@ filename_html <- 'Moti2022'
   file.remove(paste0(getwd(), '/', filename_html, '.html'))
   }
 
+# here is how we bump versions
+gert::git_tag_create('v0.0.2', "Version 0.0.2 - updates related to pscis reassessment submissions in 2024")
+gert::git_tag_push('v0.0.2')
