@@ -13,7 +13,7 @@ author: |
 
 date: |
  |
- | Version 0.0.1 DRAFT
+ | Version 0.0.2 DRAFT
  | `r format(Sys.Date(), "%Y-%m-%d")`
 toc-title: Table of Contents
 site: bookdown::bookdown_site
@@ -21,6 +21,8 @@ output:
   bookdown::gitbook:
           includes:
             in_header: header.html
+params:
+  repo_url: 'https://github.com/NewGraphEnvironment/fish_passage_moti_2022_reporting/'
 nocite: |
 
 documentclass: book
@@ -28,7 +30,7 @@ bibliography: [book.bib, references.bib, packages.bib]
 biblio-style: apalike
 link-citations: no
 github-repo: rstudio/bookdown-demo
-description: "Reporting for 2022 Fish Passage Restoration Planning Assessments in the Elk River watershed group."
+description: "Effectiveness Monitoring for Cross Creek, Bittner Creek and Five Mile Creek."
 
 ---
 

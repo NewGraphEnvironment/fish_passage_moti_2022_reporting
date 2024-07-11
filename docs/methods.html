@@ -5,19 +5,19 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>3 Methods | Effectiveness Monitoring for Cross Creek, Bittner Creek and Five Mile Creek - 2022</title>
-  <meta name="description" content="Reporting for 2022 Fish Passage Restoration Planning Assessments in the Elk River watershed group." />
-  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
+  <meta name="description" content="Effectiveness Monitoring for Cross Creek, Bittner Creek and Five Mile Creek." />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
 
   <meta property="og:title" content="3 Methods | Effectiveness Monitoring for Cross Creek, Bittner Creek and Five Mile Creek - 2022" />
   <meta property="og:type" content="book" />
   
-  <meta property="og:description" content="Reporting for 2022 Fish Passage Restoration Planning Assessments in the Elk River watershed group." />
+  <meta property="og:description" content="Effectiveness Monitoring for Cross Creek, Bittner Creek and Five Mile Creek." />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="3 Methods | Effectiveness Monitoring for Cross Creek, Bittner Creek and Five Mile Creek - 2022" />
   
-  <meta name="twitter:description" content="Reporting for 2022 Fish Passage Restoration Planning Assessments in the Elk River watershed group." />
+  <meta name="twitter:description" content="Effectiveness Monitoring for Cross Creek, Bittner Creek and Five Mile Creek." />
   
 
 
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', toggle_R);
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -147,10 +147,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </style>
 
 <style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+<style type="text/css">
 /* Used with Pandoc 2.11+ new --citeproc when CSL is used */
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging div.csl-entry {
   margin-left:2em;
@@ -221,6 +226,11 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="5" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>5</b> Conclusion</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="" data-path="changelog.html"><a href="changelog.html"><i class="fa fa-check"></i>Changelog</a>
+<ul>
+<li class="chapter" data-level="" data-path="changelog.html"><a href="changelog.html#fish_passage_moti_2022_reporting-0.0.2-2024-07-11"><i class="fa fa-check"></i>fish_passage_moti_2022_reporting 0.0.2 (2024-07-11)</a></li>
+<li class="chapter" data-level="" data-path="changelog.html"><a href="changelog.html#fish_passage_moti_2022_reporting-0.0.1-2023-05-03"><i class="fa fa-check"></i>fish_passage_moti_2022_reporting 0.0.1 (2023-05-03)</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="session-info.html"><a href="session-info.html"><i class="fa fa-check"></i>Session Info</a></li>
 <li class="chapter" data-level="" data-path="attachment-1---raw-data.html"><a href="attachment-1---raw-data.html"><i class="fa fa-check"></i><strong>Attachment 1 - Raw Data</strong></a></li>
 <li class="divider"></li>
@@ -254,9 +264,9 @@ div.csl-indent {
 <span id="cb6-2"><a href="methods.html#cb6-2" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="at">caption =</span> <span class="st">&#39;Habitat value criteria (Fish Passage Technical Working Group, 2011).&#39;</span>, <span class="at">booktabs =</span> T) <span class="sc">%&gt;%</span> </span>
 <span id="cb6-3"><a href="methods.html#cb6-3" tabindex="-1"></a>    kableExtra<span class="sc">::</span><span class="fu">column_spec</span>(<span class="at">column =</span> <span class="dv">1</span>, <span class="at">width_min =</span> <span class="st">&#39;1.5in&#39;</span>) <span class="sc">%&gt;%</span> </span>
 <span id="cb6-4"><a href="methods.html#cb6-4" tabindex="-1"></a>    kableExtra<span class="sc">::</span><span class="fu">kable_styling</span>(<span class="fu">c</span>(<span class="st">&quot;condensed&quot;</span>), <span class="at">full_width =</span> T, <span class="at">font_size =</span> font_set) </span></code></pre></div>
-<table class="table table-condensed" style="font-size: 11px; margin-left: auto; margin-right: auto;">
+<table class="table table-condensed" style="font-size: 11px; color: black; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:tab-hab-value">Table 3.1: </span>Habitat value criteria (Fish Passage Technical Working Group, 2011).
+<span id="tab:tab-hab-value">Table 3.1: </span><span id="tab:tab-hab-value">Table 3.2: </span>Habitat value criteria (Fish Passage Technical Working Group, 2011).
 </caption>
 <thead>
 <tr>
@@ -298,7 +308,7 @@ No suitable spawning habitat, and habitat with low rearing potential (e.g., loca
 <p><br></p>
 <div id="barrier-scoring" class="section level3 hasAnchor" number="3.1.1">
 <h3><span class="header-section-number">3.1.1</span> Barrier Scoring<a href="methods.html#barrier-scoring" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Fish passage potential was determined for each stream crossing identified as a closed bottom structure as per <span class="citation">MoE (2011a)</span>. The combined scores from five criteria: depth and degree to which the structure is embedded, outlet drop, stream width ratio, culvert slope, and culvert length were used to screen whether each culvert was a likely barrier to some fish species and life stages (Table <a href="methods.html#tab:tab-barrier-scoring">3.2</a>, Table <a href="methods.html#tab:tab-barrier-result">3.3</a>. These criteria were developed based on data obtained from various studies and reflect an estimation for the passage of a juvenile salmon or small resident rainbow trout <span class="citation">(Clarkin et al. 2005 ; Bell 1991; Thompson 2013)</span>.</p>
+<p>Fish passage potential was determined for each stream crossing identified as a closed bottom structure as per <span class="citation">MoE (2011a)</span>. The combined scores from five criteria: depth and degree to which the structure is embedded, outlet drop, stream width ratio, culvert slope, and culvert length were used to screen whether each culvert was a likely barrier to some fish species and life stages (Table <a href="methods.html#tab:tab-barrier-scoring">3.3</a>, Table <a href="methods.html#tab:tab-barrier-result">3.4</a>. These criteria were developed based on data obtained from various studies and reflect an estimation for the passage of a juvenile salmon or small resident rainbow trout <span class="citation">(Clarkin et al. 2005 ; Bell 1991; Thompson 2013)</span>.</p>
 <p><br></p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="methods.html#cb7-1" tabindex="-1"></a>tab <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(<span class="fu">t</span>(fpr_table_barrier_scoring)) <span class="sc">%&gt;%</span> </span>
 <span id="cb7-2"><a href="methods.html#cb7-2" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">V4 =</span> <span class="fu">names</span>(fpr_table_barrier_scoring)) <span class="sc">%&gt;%</span> </span>
@@ -309,9 +319,9 @@ No suitable spawning habitat, and habitat with low rearing potential (e.g., loca
 <span id="cb7-7"><a href="methods.html#cb7-7" tabindex="-1"></a></span>
 <span id="cb7-8"><a href="methods.html#cb7-8" tabindex="-1"></a>tab <span class="sc">%&gt;%</span> </span>
 <span id="cb7-9"><a href="methods.html#cb7-9" tabindex="-1"></a>  fpr<span class="sc">::</span><span class="fu">fpr_kable</span>(<span class="at">caption_text =</span> <span class="st">&#39;Fish Barrier Risk Assessment (MoE 2011).&#39;</span>, <span class="at">scroll =</span> F)</span></code></pre></div>
-<table class="table table-condensed table-responsive" style="font-size: 11px; margin-left: auto; margin-right: auto;">
+<table class="table table-condensed table-responsive" style="font-size: 11px; color: black; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:tab-barrier-scoring">Table 3.2: </span>Fish Barrier Risk Assessment (MoE 2011).
+<span id="tab:tab-barrier-scoring">Table 3.3: </span>Fish Barrier Risk Assessment (MoE 2011).
 </caption>
 <thead>
 <tr>
@@ -475,9 +485,9 @@ Value
 <p><br></p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="methods.html#cb8-1" tabindex="-1"></a>fpr<span class="sc">::</span>fpr_table_barrier_result <span class="sc">%&gt;%</span> </span>
 <span id="cb8-2"><a href="methods.html#cb8-2" tabindex="-1"></a>  fpr<span class="sc">::</span><span class="fu">fpr_kable</span>(<span class="at">caption_text =</span> <span class="st">&#39;Fish Barrier Scoring Results (MoE 2011).&#39;</span>, <span class="at">scroll =</span> F) </span></code></pre></div>
-<table class="table table-condensed table-responsive" style="font-size: 11px; margin-left: auto; margin-right: auto;">
+<table class="table table-condensed table-responsive" style="font-size: 11px; color: black; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:tab-barrier-result">Table 3.3: </span>Fish Barrier Scoring Results (MoE 2011).
+<span id="tab:tab-barrier-result">Table 3.4: </span>Fish Barrier Scoring Results (MoE 2011).
 </caption>
 <thead>
 <tr>
@@ -532,9 +542,9 @@ barrier
 <span id="cb9-4"><a href="methods.html#cb9-4" tabindex="-1"></a>                                T <span class="sc">~</span> Parameter)) <span class="sc">%&gt;%</span> </span>
 <span id="cb9-5"><a href="methods.html#cb9-5" tabindex="-1"></a>  fpr<span class="sc">::</span><span class="fu">fpr_kable</span>(<span class="at">scroll =</span> F,</span>
 <span id="cb9-6"><a href="methods.html#cb9-6" tabindex="-1"></a>                 <span class="at">caption_text =</span> <span class="st">&#39;Description of monitoring metrics used for effectiveness monitoring.&#39;</span>)</span></code></pre></div>
-<table class="table table-condensed table-responsive" style="font-size: 11px; margin-left: auto; margin-right: auto;">
+<table class="table table-condensed table-responsive" style="font-size: 11px; color: black; margin-left: auto; margin-right: auto;">
 <caption style="font-size: initial !important;">
-<span id="tab:tab-mon-metrics">Table 3.4: </span>Description of monitoring metrics used for effectiveness monitoring.
+<span id="tab:tab-mon-metrics">Table 3.5: </span>Description of monitoring metrics used for effectiveness monitoring.
 </caption>
 <thead>
 <tr>
@@ -648,7 +658,7 @@ General recommendations for follow up. Could include revegetation, addition of s
 </div>
 <div id="reporting" class="section level2 hasAnchor" number="3.4">
 <h2><span class="header-section-number">3.4</span> Reporting<a href="methods.html#reporting" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Reporting was generated with <code>bookdown</code> <span class="citation">(Xie 2016)</span> from <code>Rmarkdown</code> <span class="citation">(Allaire et al. 2023)</span> with primarily <code>R</code> <span class="citation">(R Core Team 2022)</span> and <code>SQL</code> scripts. The <code>R</code> package <code>fpr</code> contains many specialized custom functions related to the work <span class="citation">(Irvine 2023)</span>. In addition to numerous spatial layers sourced through the BC Data Catalogue then stored and queried in a local <code>postgresql</code> and <code>sqlite</code> databases <a href="https://github.com/NewGraphEnvironment/fish_passage_moti_2022_reporting/tree/main/data">data inputs</a> for this project include:</p>
+<p>Reporting was generated with <code>bookdown</code> <span class="citation">(Xie 2016)</span> from <code>Rmarkdown</code> <span class="citation">(Allaire et al. 2024)</span> with primarily <code>R</code> <span class="citation">(R Core Team 2022)</span> and <code>SQL</code> scripts. The <code>R</code> package <code>fpr</code> contains many specialized custom functions related to the work <span class="citation">(Irvine 2023)</span>. In addition to numerous spatial layers sourced through the BC Data Catalogue then stored and queried in a local <code>postgresql</code> and <code>sqlite</code> databases <a href="https://github.com/NewGraphEnvironment/fish_passage_moti_2022_reporting/tree/main/data">data inputs</a> for this project include:</p>
 <ul>
 <li><p>Populated <a href="https://www2.gov.bc.ca/gov/content/environment/plants-animals-ecosystems/fish/fish-and-fish-habitat-data-information/fish-data-submission/submit-fish-data#submitfish">Fish Data Submission Spreadsheet Template - V 2.0, January 20, 2020</a></p></li>
 <li><p>Populated <a href="https://www2.gov.bc.ca/gov/content/environment/plants-animals-ecosystems/fish/aquatic-habitat-management/fish-passage/fish-passage-technical/assessment-projects">pscis_assessment_template_v24.xls</a></p></li>
